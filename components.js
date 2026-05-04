@@ -259,7 +259,7 @@ function initPage(opts = {}) {
       }],
       "priceRange": "₺₺",
       "areaServed": ["Antalya", "Lara", "Muratpaşa", "Konyaaltı", "Kepez", "Döşemealtı", "Aksu"],
-      "sameAs": ["https://www.google.com/maps/place/Nett+Oto+Boya+ve+Hasar+Onar%C4%B1m/@36.9265061,30.6440048,18.5z/data=!4m22!1m15!4m14!1m6!1m2!1s0x14c38f8d8573d0d1:0xb07575d1dd742dcb!2sNett+Oto+Boya+ve+Hasar+Onar%C4%B1m,+%C5%9Eafak,+5040.Sokak+Sanayi+28%2FA+Blok+No+16,+07220+Kepez%2FAntalya!2m2!1d30.6443892!2d36.9262793!1m6!1m2!1s0x14c38f8d8573d0d1:0xb07575d1dd742dcb!2sNett+Oto+Boya+ve+Hasar+Onar%C4%B1m,+%C5%9Eafak,+5040.Sokak+Sanayi+28%2FA+Blok+No+16,+07220+Kepez%2FAntalya!2m2!1d30.6443892!2d36.9262793!3m5!1s0x14c38f8d8573d0d1:0xb07575d1dd742dcb!8m2!3d36.9262793!4d30.6443892!16s%2Fg%2F11ry77gh7g?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D"]
+      "sameAs": ["https://share.google/0gzxBtbt3USh0QMjM"]
     };
     if (opts.schema) {
       renderSchema(Object.assign({}, baseSchema, opts.schema));

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proje Galerisi — NeTT Oto Boya Öncesi ve Sonrası</title>
+  <meta name="description"
+    content="NeTT Oto Boya atölyesinde tamamlanan kaporta onarım, Fırınlı boya ve klasik araç restorasyonu projelerinin öncesi-sonrası fotoğrafları.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nettotoboya.com/galeri.html">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .filter-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .filter-btn {
+      padding: 10px 24px;
+      border-radius: 100px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent-yellow);
+      color: #000;
+      border-color: var(--accent-yellow);
+    }
+
+    .gallery-item {
+      display: none;
+    }
+
+    .gallery-item.show {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+  
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <img src="foto/netotoboya-bmw-boyama.jpg" class="page-hero-bg" alt="NeTT Proje Galerisi" loading="eager">
+    <div class="page-hero-overlay"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <p
+          style="font-size:0.75rem; font-weight:800; letter-spacing:4px; color:rgba(255,255,255,0.5); margin-bottom:10px">
+          PORTFOLYO</p>
+        <h1 class="fade-in">PROJE <span class="text-yellow">GALERISI</span></h1>
+        <p class="fade-in">Sözler değil, sonuçlar konuşur. Atölyemizde tamamlanan bazı seçkin onarım ve boyama
+          projelerimiz.</p>
+      </div>
+    </div>
+  </section>
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li>Galeri</li>
+      </ol>
+    </div>
+  </nav>
+  <main>
+    <section class="section-padding">
+      <div class="container">
+
+        <div class="filter-btn-group fade-in">
+          <button class="filter-btn active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="before-after">Öncesi & Sonrası</button>
+          <button class="filter-btn" data-filter="restoration">Klasik Araç</button>
+          <button class="filter-btn" data-filter="special">Özel Projeler</button>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+
+          <!-- Before / After Set 1 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/nettotoboya-hasar-onarm.jpg" alt="Kaporta Öncesi" loading="lazy"><span
+                  class="ba-label">Öncesi</span></div>
+              <div class="ba-half"><img src="foto/c.jpg" alt="Kaporta Sonrası" loading="lazy"><span class="ba-label"
+                  style="background:var(--accent-yellow); color:#000">Sonrası</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>Ağır Kaporta Onarımı</h4>
+              <p>Değişim olmadan orijinal parça kurtarma ve Fırınlı boya.</p>
+            </div>
+          </div>
+          <!-- Before / After Set 2 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/mus/1.jpg" alt="Çizik Öncesi" loading="lazy"><span
+                  class="ba-label">Öncesi</span></div>
+              <div class="ba-half"><img src="foto/mus/2.jpg" alt="Çizik Sonrası" loading="lazy"><span class="ba-label"
+                  style="background:var(--accent-yellow); color:#000">Sonrası</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>Lokal Çizik Onarımı</h4>
+              <p>Renk geçişsiz lokal yama boyası uygulaması.</p>
+            </div>
+          </div>
+          <!-- Before / After Set 3 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/netotoboya-bmw-boyama.jpg" alt="Güneş Yanığı Öncesi"
+                  loading="lazy"><span class="ba-label">Öncesi</span></div>
+              <div class="ba-half"><img src="foto/afa.jpg" alt="Güneş Yanığı Sonrası" loading="lazy"><span
+                  class="ba-label" style="background:var(--accent-yellow); color:#000">Sonrası</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>Güneş Yanığı Tamiri</h4>
+              <p>UV filtreli özel vernik yenileme işlemi.</p>
+            </div>
+          </div>
+          <!-- Before / After Set 4 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/beforeafter/before (3).jpeg" alt="Darbe Öncesi" loading="lazy"><span
+                  class="ba-label">Öncesi</span></div>
+              <div class="ba-half"><img src="foto/beforeafter/after (3).jpeg" alt="Darbe Sonrası" loading="lazy"><span
+                  class="ba-label" style="background:var(--accent-yellow); color:#000">Sonrası</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>Çamurluk Göçük Düzeltme</h4>
+              <p>Şase podyesi korunarak yapılan kaporta ve boya işlemi.</p>
+            </div>
+          </div>
+          <!-- Restoration Project 1 -->
+          <div class="before-after-card gallery-item show restoration">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/1957 chevrolet belair/23.jpeg" alt="Restorasyon Aşaması"
+                  loading="lazy"><span class="ba-label">Aşaması</span></div>
+              <div class="ba-half"><img src="foto/1957 chevrolet belair/11.jpeg" alt="Restorasyon Sonucu"
+                  loading="lazy"><span class="ba-label"
+                  style="background:var(--accent-yellow); color:#000">Sonucu</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>1957 Chevrolet Bel Air</h4>
+              <p>Komple kumlama, epoksi astar ve Fırınlı klasik restorasyon.</p>
+            </div>
+          </div>
+          <!-- Special / Minibus -->
+          <div class="before-after-card gallery-item show special">
+            <div style="aspect-ratio:16/9; overflow:hidden">
+              <img src="foto/minibs_onarm.jpg" alt="Minibüs Projesi" style="width:100%; height:100%; object-fit:cover">
+            </div>
+            <div class="ba-info">
+              <h4>Ticari Araç Toplama</h4>
+              <p>Ağır hasarlı VIP minibüsün kaporta şase ve komple boya işlemi.</p>
+            </div>
+          </div>
+          <!-- Special / BMW -->
+          <div class="before-after-card gallery-item show special">
+            <div style="aspect-ratio:16/9; overflow:hidden">
+              <img src="foto/nettotoboya_mail.jpg" alt="BMW Boyama" style="width:100%; height:100%; object-fit:cover">
+            </div>
+            <div class="ba-info">
+              <h4>Lüks Segment Boya</h4>
+              <p>BMW kaput ve tavanında orijinal renk kodlu %100 uyumlu boyama.</p>
+            </div>
+          </div>
+          <!-- Special / Tampon -->
+          <div class="before-after-card gallery-item show special">
+            <div style="aspect-ratio:16/9; overflow:hidden">
+              <img src="foto/4.jpg" alt="Tampon Onarımı" style="width:100%; height:100%; object-fit:cover">
+            </div>
+            <div class="ba-info">
+              <h4>Tampon ve Plastik Onarımı</h4>
+              <p>Esnek astar uygulanarak yapılan ömürlük tampon boyası.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section class="section-padding" style="background:var(--bg-secondary)">
+      <div class="container">
+        <div class="cta-block fade-in">
+          <h2>SIRADAKİ PROJE <span class="text-yellow">ARACINIZ OLSUN</span></h2>
+          <p>Mükemmeliyetçi işçiliğimizle tanışmak ve aracınız için fiyat almak için fotoğraf gönderin.</p>
+          <div class="btn-group">
+            <a href="https://wa.me/905388404264" class="btn btn-primary">WhatsApp'tan Teklif Al</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initPage({ activePage: 'galeri.html' });
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            if (filter === 'all' || item.classList.contains(filter)) {
+              item.classList.add('show');
+            } else {
+              item.classList.remove('show');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

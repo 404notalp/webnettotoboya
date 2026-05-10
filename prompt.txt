@@ -1,0 +1,21 @@
+Sen kıdemli bir Frontend Performans Mühendisisin. Görevimiz, "nettotoboya.com" projesi için mobil PageSpeed Insights skorunu 84'ten 90+ seviyesine, özellikle LCP (şu an 3.8s) ve FCP (şu an 2.7s) metriklerini 2.5 saniyenin altına çekerek yükseltmek.
+
+Aşağıdaki PageSpeed analizine göre, proje dosyalarında sırasıyla şu 4 fazdaki değişiklikleri uygulamanı istiyorum. Lütfen görevleri adım adım yap ve mevcut tasarımı/işlevselliği bozmadığından emin ol.
+
+FAZ 1: LCP ve Görsel Optimizasyonları
+- "logo.png" (LCP Öğesi): Bu görselin boyutunu ve formatını optimize et (mümkünse WebP/SVG yap). HTML dosyasındaki <img> etiketine `width="130"` ve `height="65"` niteliklerini açıkça ekle (CLS'yi önlemek için). Kesinlikle `loading="lazy"` KULLANMA, bunun yerine `fetchpriority="high"` ve `decoding="sync"` ekle.
+- "foto/c.webp": Bu görsel mobilde gereğinden büyük (961x1200) yükleniyor. Kod içerisinde uygun bir yöntemle (örneğin <picture> etiketi, srcset veya CSS media queries ile) mobil için daha düşük çözünürlüklü/boyutlu bir versiyonunun yüklenmesini sağla.
+
+FAZ 2: Render-Blocking (Oluşturmayı Engelleyen) Kaynakların Çözümü
+- "styles.css": Sayfanın ilk yüklenmesini (150ms) engelliyor. Ekranın üst kısmı (above-the-fold) için kritik olan CSS kurallarını (header, logo, ilk background vb.) HTML `<head>` içine `<style>` etiketiyle inline olarak taşı.
+- Kalan kritik olmayan CSS'in asenkron yüklenmesini sağla (Örn: `<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">`). `<noscript>` yedeğini eklemeyi unutma.
+
+FAZ 3: Font Optimizasyonu
+- HTML içindeki tüm Google Fonts `<link>` etiketlerinin URL'lerine `&display=swap` parametresinin eklendiğinden emin ol.
+
+FAZ 4: Erişilebilirlik (A11y) ve SEO Düzeltmeleri
+- WhatsApp Butonu: Butonun arka plan rengi (`#25D366`) ile beyaz metin arasındaki kontrast oranı yetersiz. Metin rengini veya arka plan rengini erişilebilirlik (WCAG) standartlarına uyacak şekilde güncelle.
+- HTML Semantiği: Sayfada h1, h2, h3 hiyerarşisi atlanarak doğrudan `<h4>` (Örn: BÜYÜK ÇAPLI KAPORTA VE BOYA ONARIMI, GARANTİLİ İŞÇİLİK) kullanılmış. Bu başlıkların seviyelerini hiyerarşiye uygun (h2 veya h3) olacak şekilde HTML ve CSS dosyalarında güncelle.
+- "robots.txt": Dosyadaki 29. satırda bulunan `Content-Signal: search=yes,ai-train=no` geçersiz kuralını sil.
+
+Lütfen işleme FAZ 1'den başla ve dosyaları güncelledikçe bana kısa raporlar ver. Hazırsan başlayalım.

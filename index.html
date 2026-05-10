@@ -16,8 +16,34 @@
     content="Fırınlı boya, kaporta onarım ve lüks araç restorasyonu. Akdeniz Sanayi Sitesi, Antalya.">
   <meta property="og:url" content="https://nettotoboya.com/">
   <meta property="og:image" content="https://nettotoboya.com/foto/netotoboya-akdenizsanayisi-dkkan.webp">
-  <!-- Critical CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Critical CSS - inline for fastest render -->
+  <style>
+    :root{--bg-primary:#000;--bg-secondary:#080808;--accent-yellow:#F5D623;--text-primary:#fff;--text-secondary:#bbb;--font-body:'Plus Jakarta Sans',sans-serif;--font-heading:'Outfit',sans-serif;--container:1400px;--header-h:80px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-font-smoothing:antialiased}
+    body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+    .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+    .site-header{position:fixed;top:0;left:0;width:100%;height:var(--header-h);background:rgba(0,0,0,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.08);z-index:1000}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
+    .header-logo{display:flex;align-items:center;height:100%}
+    .header-logo img{max-height:65px;width:auto}
+    .page-hero{height:100vh;background:#000;position:relative;display:flex;align-items:center;justify-content:center}
+    .hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:0 24px}
+    .hero-content h1{font-family:var(--font-heading);font-size:clamp(2.5rem,8vw,5rem);line-height:1.05;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:20px}
+    .hero-content p{font-size:1.1rem;color:var(--text-secondary);margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:12px;font-weight:700;font-size:.95rem;cursor:pointer;transition:.3s;border:none}
+    .btn-primary{background:var(--accent-yellow);color:#000}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(245,214,35,.3)}
+    .btn-secondary{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
+    .btn-secondary:hover{background:rgba(255,255,255,.15)}
+    .text-yellow{color:var(--accent-yellow)}
+    /* Below fold optimization */
+    .section-padding,footer{content-visibility:auto;contain-intrinsic-size:1px 500px}
+    @media(max-width:768px){.site-header{height:70px}.hero-content h1{font-size:2.2rem}.btn{padding:14px 24px}}
+  </style>
+  <!-- Async load non-critical CSS -->
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <!-- Google Fonts async: zero render-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,7 +143,10 @@
           <a href="hakkimizda.html" class="btn btn-secondary btn-sm">Bizi Tanıyın</a>
         </div>
         <div class="image-card fade-in" style="aspect-ratio:4/5">
-          <img src="foto/c.webp" alt="NeTT BMW Profesyonel Boya Uygulaması" width="340" height="425" loading="lazy">
+          <picture>
+            <source srcset="foto/c-mobil.webp" media="(max-width: 480px)">
+            <img src="foto/c.webp" alt="NeTT BMW Profesyonel Boya Uygulaması" width="340" height="425" loading="lazy">
+          </picture>
         </div>
       </div>
     </div>
@@ -197,7 +226,7 @@
             </div>
           </div>
           <div class="ba-info">
-            <h4>Büyük Çaplı Kaporta ve Boya Onarımı</h4>
+            <h3>Büyük Çaplı Kaporta ve Boya Onarımı</h3>
             <p>Ağır hasarlı panelin değiştirilmeden, orijinal hatlarına kavuşturularak lokal boyanması.</p>
           </div>
         </div>
@@ -214,7 +243,7 @@
             </div>
           </div>
           <div class="ba-info">
-            <h4>Sürtme ve Çizik Onarımı</h4>
+            <h3>Sürtme ve Çizik Onarımı</h3>
             <p>Parçanın tamamını boyamadan, renk uyumu garantisiyle yapılan lokal çizik onarımı.</p>
           </div>
         </div>
@@ -231,7 +260,7 @@
             </div>
           </div>
           <div class="ba-info">
-            <h4>Çamurluk Hasar Düzeltme</h4>
+            <h3>Çamurluk Hasar Düzeltme</h3>
             <p>Ezik çamurluğun şase geometrisi korunarak düzeltilmesi ve Fırınlı boya ile kusursuz teslimatı.</p>
           </div>
         </div>
@@ -262,19 +291,19 @@
 
           <div class="values-grid">
             <div class="value-card">
-              <h4>Garantili İşçilik</h4>
+              <h3>Garantili İşçilik</h3>
               <p>Yaptığımız her boya ve kaporta işleminde yazılı garanti sunuyoruz.</p>
             </div>
             <div class="value-card">
-              <h4>Aynı Gün Ekspertiz</h4>
+              <h3>Aynı Gün Ekspertiz</h3>
               <p>Araç onarım maliyetini WhatsApp veya atölyemizde anında belirliyoruz.</p>
             </div>
             <div class="value-card">
-              <h4>Premium Malzeme</h4>
+              <h3>Premium Malzeme</h3>
               <p>Dünyanın en iyi boya markaları olan PPG ve Standox ile çalışıyoruz.</p>
             </div>
             <div class="value-card">
-              <h4>Temiz Teslimat</h4>
+              <h3>Temiz Teslimat</h3>
               <p>Onarım bitiminde aracınızı detaylı temizleyerek ilk günkü haliyle teslim ederiz.</p>
             </div>
           </div>
@@ -299,7 +328,7 @@
           <div
             style="font-size:3rem; font-weight:900; color:rgba(245,214,35,0.1); margin-bottom:-20px; font-family:var(--font-heading)">
             01</div>
-          <h4 class="text-yellow" style="margin-bottom:10px">Ekspertiz</h4>
+          <h3 class="text-yellow" style="margin-bottom:10px">Ekspertiz</h3>
           <p style="font-size:0.9rem; color:var(--text-secondary)">Hasar tespiti ve şeffaf fiyatlandırma. Fotoğrafla
             veya yerinde ücretsiz değerlendirme.</p>
         </div>
@@ -310,7 +339,7 @@
           <div
             style="font-size:3rem; font-weight:900; color:rgba(245,214,35,0.1); margin-bottom:-20px; font-family:var(--font-heading)">
             02</div>
-          <h4 class="text-yellow" style="margin-bottom:10px">Hazırlık</h4>
+          <h3 class="text-yellow" style="margin-bottom:10px">Hazırlık</h3>
           <p style="font-size:0.9rem; color:var(--text-secondary)">Kaporta düzeltme, zımparalama ve astar
             uygulamasıyla mükemmel yüzey hazırlığı.</p>
         </div>
@@ -321,7 +350,7 @@
           <div
             style="font-size:3rem; font-weight:900; color:rgba(245,214,35,0.1); margin-bottom:-20px; font-family:var(--font-heading)">
             03</div>
-          <h4 class="text-yellow" style="margin-bottom:10px">Boyama</h4>
+          <h3 class="text-yellow" style="margin-bottom:10px">Boyama</h3>
           <p style="font-size:0.9rem; color:var(--text-secondary)">İtalyan Fırınlı kabinlerde, tozsuz ve steril ortamda
             profesyonel boya uygulaması.</p>
         </div>
@@ -332,7 +361,7 @@
           <div
             style="font-size:3rem; font-weight:900; color:rgba(245,214,35,0.1); margin-bottom:-20px; font-family:var(--font-heading)">
             04</div>
-          <h4 class="text-yellow" style="margin-bottom:10px">Teslimat</h4>
+          <h3 class="text-yellow" style="margin-bottom:10px">Teslimat</h3>
           <p style="font-size:0.9rem; color:var(--text-secondary)">Son kalite kontrol, detaylı temizlik ve garantiyle
             birlikte anahtar teslim.</p>
         </div>
@@ -349,19 +378,19 @@
       </div>
       <div style="display:flex; flex-direction:column; gap:20px">
         <div class="service-item fade-in" style="padding:25px">
-          <h4 style="margin-bottom:10px; color:var(--accent-yellow)">Fırınlı boya ne kadar sürer?</h4>
+          <h3 style="margin-bottom:10px; color:var(--accent-yellow)">Fırınlı boya ne kadar sürer?</h3>
           <p style="color:var(--text-secondary); font-size:0.9rem">Hasarın büyüklüğüne bağlı olarak parça boyama
             genellikle 1 gün, komple araç boyama ise 5–10 gün sürmektedir. Size özel tahmini süreyi ekspertiz sonrası
             bildiririz.</p>
         </div>
         <div class="service-item fade-in" style="padding:25px">
-          <h4 style="margin-bottom:10px; color:var(--accent-yellow)">Fiyat teklifi nasıl alırım?</h4>
+          <h3 style="margin-bottom:10px; color:var(--accent-yellow)">Fiyat teklifi nasıl alırım?</h3>
           <p style="color:var(--text-secondary); font-size:0.9rem">WhatsApp üzerinden aracınızın fotoğraflarını
             göndererek 15 dakika içinde yaklaşık fiyat bilgisi alabilir, ya da atölyemize gelerek ücretsiz yerinde
             ekspertiz talep edebilirsiniz.</p>
         </div>
         <div class="service-item fade-in" style="padding:25px">
-          <h4 style="margin-bottom:10px; color:var(--accent-yellow)">Araç boyandığında değer kaybeder mi?</h4>
+          <h3 style="margin-bottom:10px; color:var(--accent-yellow)">Araç boyandığında değer kaybeder mi?</h3>
           <p style="color:var(--text-secondary); font-size:0.9rem">Profesyonelce yapılan lokal onarımlar, hasarlı
             parçanın tümünü etkilemediği için değer kaybını minimumda tutar. Güneş yanığı gibi durumlarda ise doğru
             boyama araca değer katar.</p>

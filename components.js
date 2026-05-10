@@ -60,7 +60,7 @@ function renderHeader(activePage) {
   header.innerHTML = `
     <div class="container" style="height:100%">
       <div class="header-inner">
-        <a href="${basePath}index.html" class="header-logo"><img src="${basePath}${CONFIG.logoPath}" alt="NeTT Oto Boya Antalya" width="130" height="65"></a>
+        <a href="${basePath}index.html" class="header-logo"><img src="${basePath}${CONFIG.logoPath}" alt="NeTT Oto Boya Antalya" width="130" height="65" fetchpriority="high" decoding="sync"></a>
         <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Ana Menü">
           ${nav.map((n, i) => {
     if (n.dropdown) {

@@ -41,10 +41,10 @@ function renderHeader(activePage) {
         { label: 'Tampon & Parça Boyama', href: 'antalya-tampon-parca-boyama.html' },
         { label: 'Lokal Boya', href: 'antalya-lokal-boya.html' },
         { label: 'Çizik Onarım', href: 'antalya-cizik-onarim.html' },
-        { label: 'Macun & Astar', href: 'antalya-macun-astar-işlemleri.html' },
+        { label: 'Macun & Astar', href: 'antalya-macun-astar-islemleri.html' },
         { label: 'Restorasyon', href: 'antalya-klasik-araba-restorasyon.html' },
         { label: 'Araç Toplama', href: 'antalya-arac-toplama.html' },
-        { label: 'Güneş Yanığı', href: 'antalya-Güneş-yanigi-tamiri.html' }
+        { label: 'Güneş Yanığı', href: 'antalya-gunes-yanigi-tamiri.html' }
       ]
     },
     { label: 'Bölgeler', href: 'bolgeler.html' },

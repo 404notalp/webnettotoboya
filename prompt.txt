@@ -1,44 +1,38 @@
-{
-  "system_role": "Kıdemli Yerel SEO Uzmanı, İçerik Stratejisti ve Next.js & Tailwind CSS Web Geliştiricisi",
-  "project_context": {
-    "brand_name": "Nett Oto Boya",
-    "target_location": "Antalya, Türkiye",
-    "industry": "Oto Boya, Kaporta Onarım, Klasik Araç Restorasyonu",
-    "current_problems": [
-      "İçeriklerin kısa ve zayıf olması",
-      "Özellikle BLOG sayfalarında aynı görsellerin sürekli tekrar etmesi",
-      "Uzun kuyruklu (long-tail) yerel arama hacimlerinin kaçırılması"
-    ]
-  },
-  "objectives": {
-    "goal_1": "Google'da yerel otorite kurmak için siteyi derin, kaliteli ve optimize edilmiş içeriklerle büyütmek.",
-    "goal_2": "Görsel tekrarı sorununu çözerek zengin bir medya deneyimi sunmak."
-  },
-  "tasks": [
-    {
-      "step": 1,
-      "name": "Kapsamlı Site Denetimi ve Mimari Planlama",
-      "action": "Sitenin mevcut durumunu tarayarak eksik sayfaları ve SEO fırsatlarını bul. Bana adım adım uygulanacak bir 'İçerik ve Geliştirme Yol Haritası' çıkar."
-    },
-    {
-      "step": 2,
-      "name": "Uzun Kuyruklu (Long-Tail) SEO İçerik Üretimi",
-      "action": "'Antalya uygun araç boyama', 'Antalya hasarlı araç kaporta onarımı', 'Akdeniz sanayi oto boyama', 'Antalya lokal boya' gibi kelimeleri kullanarak uzun, teknik ama anlaşılır hizmet ve blog sayfaları yaz. Asla gereksiz kelime kalabalığı (fluff) yapma."
-    },
-    {
-      "step": 3,
-      "name": "Görsel Çeşitlilik Stratejisi (KRİTİK ADIM)",
-      "action": "Özellikle BLOG bölümündeki görsel tekrarını tamamen bitir. Yazdığın her içeriğe bağlama uygun, çeşitli ve yeni 'Görsel Alanları' (Image placeholders) ekle. Her biri için SEO uyumlu alt etiketleri yaz (Örn: alt='Antalya Akdeniz Sanayide fırınlı boya yapılan araç')."
-    },
-    {
-      "step": 4,
-      "name": "Teknik Uygulama ve Kod Çıktısı",
-      "action": "Ürettiğin içerikleri siteme doğrudan ekleyebilmem için bana Next.js ve Tailwind CSS uyumlu, semantik HTML (H1, H2, H3 hiyerarşisi kusursuz) kod blokları olarak ver."
-    }
-  ],
-  "execution_rules": {
-    "rule_1": "Bütün süreci tek bir devasa mesajda yığıp kafamı karıştırma.",
-    "rule_2": "İlk olarak sadece 1. Adımı (Denetim ve Planlama) yap ve bana yeni eklenecek sayfaların/blogların başlıklarını sun.",
-    "rule_3": "Ben bu planı onayladıktan sonra, diğer adımlara (kodlama ve içerik yazımına) geç."
-  }
-}
+Claude Code gibi bir terminal tabanlı mühendislik aracına bu görevi verdiğinde, sadece kodu yazmakla kalmaz, dosyaları oluşturur ve projeye entegre eder. İşte Cloudflare Workers kullanarak .html sitene Markdown desteği eklemesi için kullanabileceğin profesyonel ve teknik prompt:
+
+Claude Code İçin "Markdown & WebMCP" Entegrasyon Promptu
+Role: Senior Full-Stack Developer & SEO Expert
+
+Task: nettotoboya.com projemiz için AI ajanlarının (ChatGPT, Gemini vb.) sitemizi daha iyi anlayabilmesini sağlayacak "Markdown Negotiation" ve "WebMCP" özelliklerini entegre et.
+
+Requirements:
+
+Markdown for Agents (Cloudflare Worker):
+
+Proje kök dizinine bir Cloudflare Worker (markdown-agent.js) oluştur.
+
+Bu worker, gelen istekte Accept: text/markdown başlığı varsa sayfayı yakalamalı ve HTML'i Markdown'a çevirerek döndürmelidir.
+
+Yanıt başlıklarına Content-Type: text/markdown ve x-markdown-tokens (tahmini token sayısı) ekle.
+
+HTML'den Markdown'a dönüşüm için hafif bir kütüphane mantığı kur veya mevcut bir kütüphaneyi entegre et.
+
+WebMCP Entegrasyonu (Fiyat Teklifi Al):
+
+Tüm .html dosyalarını (ana sayfa, hizmetler, galeri vb.) tara.
+
+</body> etiketinden hemen önce navigator.modelContext.provideContext API'sini kullanan bir script ekle.
+
+Bu araç (tool) ismi get_auto_paint_quote olmalı.
+
+Parametre olarak arac_modeli, boyanacak_parca ve hasar_durumu bilgilerini almalı.
+
+execute fonksiyonu, alınan bu bilgileri formatlayıp WhatsApp hattımıza (90XXXXXXXXXX - Kendi numaranı buraya yaz) yönlendirecek şekilde kurgulanmalı.
+
+Validation:
+
+İşlem bittikten sonra wrangler.toml dosyasının (eğer varsa) bu yeni worker'a göre yapılandırıldığından emin ol.
+
+HTML dosyalarındaki script'lerin semantik olarak doğru yerleştiğini kontrol et.
+
+Execution: Adım adım ilerle, her dosyada yaptığın değişikliği özetle ve hata kontrolü yap.

@@ -276,4 +276,29 @@ function initPage(opts = {}) {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  // WebMCP Tool: AI ajanları için fiyat teklifi aracı
+  if ('modelContext' in navigator && navigator.modelContext.provideContext) {
+    navigator.modelContext.provideContext({
+      tools: [{
+        name: 'get_auto_paint_quote',
+        description: 'NeTT Oto Boya fiyat teklifi al - araç modeli, boyanacak parça ve hasar durumuna göre WhatsApp üzerinden bilgi verir',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            arac_modeli: { type: 'string', description: 'Aracın markası ve modeli (örn: BMW 3.20i, Mercedes C200)' },
+            boyanacak_parca: { type: 'string', description: 'Boyanacak parça/ler (örn: kapı, tampon, çamurluk, komple)' },
+            hasar_durumu: { type: 'string', description: 'Hasar durumu (örn: çizik, ezik, kaza hasarı, güneş yanığı)' }
+          },
+          required: ['arac_modeli', 'boyanacak_parca']
+        },
+        execute: async (args) => {
+          const message = `Merhaba, fiyat teklifi almak istiyorum.\n\n🚗 Araç: ${args.arac_modeli}\n🔧 Parça: ${args.boyanacak_parca}\n⚠️ Hasar: ${args.hasar_durumu || 'Belirtilmedi'}\n\nLütfen tahmini fiyat ve süre hakkında bilgi verir misiniz?`;
+          const whatsappUrl = `https://wa.me/905388404264?text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+          return { success: true, url: whatsappUrl, message: 'WhatsApp açılıyor...' };
+        }
+      }]
+    });
+  }
 }

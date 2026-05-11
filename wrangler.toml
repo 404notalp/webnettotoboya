@@ -1,0 +1,7 @@
+name = "markdown-agent"
+main = "markdown-agent.js"
+compatibility_date = "2026-05-11"
+
+# Worker configuration
+# Route: *.nettotoboya.com/* - handles markdown negotiation
+# Deploy with: wrangler deploy

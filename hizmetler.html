@@ -191,6 +191,32 @@
       initPage({ activePage: 'hizmetler.html' });
     });
   </script>
+  <!-- Services Schema for AI Agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "NeTT Oto Boya Hizmetleri",
+    "description": "Antalya Akdeniz Sanayi Sitesi'nde profesyonel oto boya ve kaporta hizmetleri",
+    "provider": {
+      "@type": "AutoBodyShop",
+      "name": "NeTT Oto Boya & Kaporta"
+    },
+    "areaServed": "Antalya",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Oto Boya Hizmetleri",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Oto Boya" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kaporta Onarım" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lokal Boya" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Güneş Yanığı Tamiri" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restorasyon" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tampon ve Parça Boyama" } }
+      ]
+    }
+  }
+  </script>
 </body>
 
 </html>

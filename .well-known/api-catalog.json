@@ -1,0 +1,39 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://nettotoboya.com/",
+      "links": [
+        {
+          "rel": "service-doc",
+          "href": "https://nettotoboya.com/",
+          "hreflang": "tr"
+        },
+        {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "https://nettotoboya.com/"
+        }
+      ]
+    },
+    {
+      "anchor": "https://nettotoboya.com/iletisim.html",
+      "links": [
+        {
+          "rel": "service-doc",
+          "href": "https://nettotoboya.com/iletisim.html",
+          "hreflang": "tr"
+        }
+      ]
+    },
+    {
+      "anchor": "https://nettotoboya.com/api/whatsapp",
+      "links": [
+        {
+          "rel": "service-desc",
+          "href": "https://nettotoboya.com/api/whatsapp",
+          "title": "WhatsApp iletişim endpointi"
+        }
+      ]
+    }
+  ]
+}

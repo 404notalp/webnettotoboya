@@ -116,6 +116,42 @@
       initPage({ activePage: 'iletisim.html' });
     });
   </script>
+  <!-- ContactPage Schema for AI Agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "NeTT Oto Boya İletişim",
+    "description": "NeTT Antalya oto boya ve kaporta atölyesi iletişim bilgileri",
+    "url": "https://nettotoboya.com/iletisim.html",
+    "mainEntity": {
+      "@type": "AutoBodyShop",
+      "name": "NeTT Oto Boya & Kaporta",
+      "telephone": "+905388404264",
+      "email": "info@nettotoboya.com",
+      "url": "https://nettotoboya.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Şafak Mahallesi, 5040. Sokak Sanayi 28/A Blok No 16",
+        "addressLocality": "Kepez",
+        "addressRegion": "Antalya",
+        "postalCode": "07220",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.9262793,
+        "longitude": 30.6443892
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "19:00"
+      }
+    }
+  }
+  </script>
 </body>
 </html>
 

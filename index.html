@@ -44,10 +44,24 @@
   </style>
   <!-- Load styles synchronously - no flash -->
   <link rel="stylesheet" href="styles.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=Outfit:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Local fonts with font-display: swap */
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      src: url('fonts/PlusJakartaSans.woff2') format('woff2');
+      font-weight: 400 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Outfit';
+      src: url('fonts/Outfit.woff2') format('woff2');
+      font-weight: 700;
+      font-display: swap;
+    }
+  </style>
+  <!-- Preload local fonts -->
+  <link rel="preload" href="fonts/PlusJakartaSans.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/Outfit.woff2" as="font" crossorigin>
   <!-- Preload LCP hero image -->
   <link rel="preload" as="image" href="foto/netotoboya-akdenizsanayisi-dkkan.webp" fetchpriority="high" type="image/webp">
 

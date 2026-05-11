@@ -72,3 +72,8 @@ Disallow: /all_broken_images_log.txt
 Disallow: /result.txt
 
 Sitemap: https://nettotoboya.com/sitemap.xml
+
+# AI Agent Discovery
+Allow: /.well-known/agent-skills/
+Allow: /.well-known/api-catalog.json
+Allow: /.well-known/mcp/

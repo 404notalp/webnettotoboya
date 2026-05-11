@@ -1,22 +1,15 @@
-Sen kıdemli bir Frontend Performans Mühendisisin. Bir önceki optimizasyonda FCP (0.8s) ve LCP (2.1s) sürelerini harika bir seviyeye çektik. Ancak mobil PageSpeed skorumuz 74'e düştü çünkü CLS (Kümülatif Düzen Kayması) puanımız 1.148 gibi kritik bir seviyeye ulaştı.
+Sen kıdemli bir Frontend Performans Mühendisisin. Yaptığın son optimizasyonlar işe yaradı, CLS (Düzen Kayması) puanımız 1.148'den 0.174'e düştü! Ancak 90+ yeşil skora ulaşmak için CLS'yi 0.1'in altına indirmemiz ve geriye kalan ufak pürüzleri kesin olarak çözmemiz gerekiyor.
 
-Hedefimiz CLS'yi 0.1'in altına indirmek ve ağır görselleri duyarlı hale getirerek mobil skoru 90+ yapmak. Lütfen aşağıdaki fazları sırasıyla proje dosyalarında uygula:
+Lütfen aşağıdaki işlemleri atlamadan, kesin bir şekilde uygula:
 
-FAZ 1: Kritik CLS (Düzen Kayması) Çözümleri
-- Hero Görseli ("foto/netotoboya-akdenizsanayisi-dkkan.webp"): Bu görsel 1.148'lik CLS'nin ana sebebi. Görselin bulunduğu kapsayıcıya (container) CSS ile kesin bir "min-height" veya "aspect-ratio" değeri vererek tarayıcının görsel yüklenmeden önce o boşluğu rezerve etmesini sağla. Görselin CSS'inde "object-fit: cover; width: 100%; height: auto;" (veya kapsayıcıya göre %100) olduğundan emin ol.
-- "logo.png" için CSS tarafında width ve height değerlerinin HTML nitelikleriyle (130x65) tam örtüştüğünden ve etrafındaki alanın rezerve edildiğinden emin ol.
+FAZ 1: Kalan CLS (0.174) Sorununun Tamamen Çözülmesi
+- Hero Görseli ("foto/netotoboya-akdenizsanayisi-dkkan.webp"): CLS'nin %99'u hala bu görselden (0.173) kaynaklanıyor. Kapsayıcısına sadece `width: 100%` vermek yetmiyor. Tarayıcının boyutu önceden tam olarak hesaplayabilmesi için bu görselin CSS sınıfına (`.page-hero-bg`) veya onu saran kapsayıcı div'e `aspect-ratio` (örneğin 16/9 veya görselin gerçek oranı) CSS kuralını kesin olarak ekle.
+- "logo.png": Bu dosyayı sadece HTML içinde width/height vererek küçültmüşsün ama dosya hala fiziksel olarak 512x512 çözünürlüğünde ve PNG formatında. Lütfen bu dosyayı fiziksel olarak 130x65 (veya max 260x130 retina) boyutuna küçült, ".webp" formatına dönüştür ve kodlardaki yolları buna göre güncelle. 
 
-FAZ 2: Görsel Boyutlandırma (Responsive Images)
-- PageSpeed ağır görseller yüzünden 739 KiB tasarruf uyarısı veriyor. Özellikle şu görseller mobilde çok büyük yükleniyor: "after (3).webp", "netotoboya-bmw-boyama.webp", "mus/2.webp", "mus/1.webp", "before (3).webp".
-- HTML içindeki bu resim etiketlerini `<picture>` etiketiyle veya `srcset` niteliğiyle güncelle. Mobil cihazlar (max-width: 768px) için bu görsellerin max 500-600px genişliğinde yüklenmesini sağlayacak HTML/CSS altyapısını kur.
+FAZ 2: Birleştirilmemiş Animasyonların Temizliği (Uncomposited Animations)
+- Önceki taramada 40 olan sayıyı 17'ye düşürmüşsün, tebrikler. Ancak menü, buton hover'ları veya slider üzerindeki kalan animasyonları tekrar kontrol et. Animasyon veya geçiş (transition) efektlerinde "color", "background-color", "border", "padding" veya "margin" gibi özellikleri animes etme. Görsel değişimleri sadece "transform" ve "opacity" kullanarak yap.
 
-FAZ 3: Animasyon Performansı (Uncomposited Animations)
-- CSS dosyalarındaki animasyonları (transition ve @keyframes) incele. Şu anda "margin", "padding", "border-width", "font-size", "color" gibi sayfa yeniden hesaplaması (reflow) gerektiren özellikler animes ediliyor.
-- Tüm hover, menü ve fade-in efektlerindeki bu özellikleri KULLANMA. Bunlar yerine SADECE "transform" (scale, translateY vb.) ve "opacity" özelliklerini kullanarak animasyonları yeniden yaz. Bu TBT ve CLS'yi çok rahatlatacak.
+FAZ 3: SEO ve Atlanan Detaylar
+- "robots.txt": Dosyadaki 29. satırda bulunan `Content-Signal: search=yes,ai-train=no` komutu YANLIŞ bir komuttur ve arama motorlarının hata vermesine sebep oluyor. Lütfen bu satırı dosyanın içinden KESİNLİKLE SİL.
 
-FAZ 4: SEO ve Erişilebilirlik (A11y)
-- Kontrast: WhatsApp butonunun (`#25D366`) ve istatistik bölümündeki ("500+ TAMAMLANAN PROJE" vb.) metinlerin/arka planların kontrast oranlarını WCAG standartlarına uyacak şekilde CSS'ten güncelle.
-- Footer Semantiği: Footer (alt bilgi) bölümündeki başlıklar doğrudan `<h4>` ile başlıyor. Hiyerarşiyi korumak için bunları uygun bir başlık etiketi (tasarımı bozmayacak şekilde `<h2>` veya `<h3>` ya da sadece bir `<span>` veya `<div>` classı) ile değiştir.
-- "robots.txt": 29. satırdaki `Content-Signal: search=yes,ai-train=no` kuralını sil (Hala duruyor).
-
-İşleme doğrudan FAZ 1'deki Hero görselinin kapsayıcı boyutlarını CSS ile sabitleyerek başla. Her faz tamamlandığında kısa bir onay ver. Başlayabiliriz.
+Bu son dokunuşlarla projeyi yeşil skora ulaştıralım. Lütfen Hero görselinin `aspect-ratio` çözümüyle ve logonun fiziksel format değişimiyle başla.

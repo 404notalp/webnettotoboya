@@ -10,7 +10,7 @@ const CONFIG = {
   mapsUrl: 'https://share.google/4NpUNOn43V3WKK2TE',
   hours: '08:30 – 19:00',
   businessName: 'NeTT',
-  logoPath: 'logo.png',
+  logoPath: 'logo.webp',
   year: new Date().getFullYear()
 };
 const ICONS = {

@@ -1,0 +1,38 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://nettotoboya.com/",
+      "service-desc": [
+        {
+          "href": "https://nettotoboya.com/.well-known/api-catalog.json",
+          "type": "application/linkset+json",
+          "title": "NeTT AI ve servis kesif katalogu"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://nettotoboya.com/llms.txt",
+          "type": "text/markdown",
+          "title": "AI icin kisa NeTT Oto Boya ozeti"
+        },
+        {
+          "href": "https://nettotoboya.com/ai-answers.md",
+          "type": "text/markdown",
+          "title": "Antalya oto boya sorulari icin kisa cevaplar"
+        }
+      ],
+      "sitemap": [
+        {
+          "href": "https://nettotoboya.com/sitemap.xml",
+          "type": "application/xml"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://nettotoboya.com/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

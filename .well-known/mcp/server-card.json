@@ -2,7 +2,7 @@
   "serverInfo": {
     "name": "NeTT Oto Boya",
     "version": "1.0.0",
-    "description": "Antalya Akdeniz Sanayi Sitesi'nde profesyonel oto boya ve kaporta hizmetleri"
+    "description": "Antalya Akdeniz Sanayi Sitesi'nde profesyonel oto boya, kaporta, araç toplama ve ağır hasar onarım hizmetleri"
   },
   "transport": {
     "type": "http",
@@ -16,7 +16,7 @@
       },
       {
         "name": "services",
-        "description": "Mevcut hizmetleri listele - oto boya, kaporta, lokal boya, restorasyon"
+        "description": "Mevcut hizmetleri listele - oto boya, kaporta, lokal boya, araç toplama, ağır hasar onarımı, restorasyon"
       },
       {
         "name": "whatsapp",

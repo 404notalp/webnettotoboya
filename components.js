@@ -149,7 +149,7 @@ function renderFooter() {
             <li><a href="${basePath}antalya-kaporta-onarim.html">Kaporta Onarım</a></li>
             <li><a href="${basePath}antalya-lokal-boya.html">Lokal Boya</a></li>
             <li><a href="${basePath}antalya-tampon-parca-boyama.html">Tampon Boyama</a></li>
-            <li><a href="${basePath}antalya-Güneş-yanigi-tamiri.html">Güneş Yanığı Tamiri</a></li>
+            <li><a href="${basePath}antalya-gunes-yanigi-tamiri.html">Güneş Yanığı Tamiri</a></li>
             <li><a href="${basePath}antalya-klasik-araba-restorasyon.html">Restorasyon</a></li>
           </ul>
         </div>
@@ -240,8 +240,8 @@ function initPage(opts = {}) {
       "@context": "https://schema.org",
       "@type": "AutoBodyShop",
       "name": "NeTT Oto Boya & Kaporta",
-      "image": "https://nettotoboya.com/foto/netotoboya-akdenizsanayisi-dkkan.jpg",
-      "description": "Antalya Akdeniz Sanayi'nde profesyonel Fırınlı oto boya, kaporta onarım ve araç restorasyon hizmeti.",
+      "image": "https://nettotoboya.com/foto/netotoboya-akdenizsanayisi-dkkan.webp",
+      "description": "Antalya Akdeniz Sanayi'nde profesyonel fırınlı oto boya, kaporta onarım, araç toplama ve araç restorasyon hizmeti.",
       "url": "https://nettotoboya.com",
       "telephone": "+905388404264",
       "address": {
@@ -259,6 +259,7 @@ function initPage(opts = {}) {
       }],
       "priceRange": "₺₺",
       "areaServed": ["Antalya", "Lara", "Muratpaşa", "Konyaaltı", "Kepez", "Döşemealtı", "Aksu"],
+      "knowsAbout": ["Antalya oto boya", "Antalya oto boyacı", "Antalya araç toplama", "Kaporta onarım", "Fırınlı oto boya"],
       "sameAs": ["https://share.google/0gzxBtbt3USh0QMjM"]
     };
     if (opts.schema) {

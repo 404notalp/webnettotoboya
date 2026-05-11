@@ -17,6 +17,18 @@
         {
           "rel": "sitemap",
           "href": "https://nettotoboya.com/sitemap.xml"
+        },
+        {
+          "rel": "alternate",
+          "type": "text/markdown",
+          "href": "https://nettotoboya.com/llms.txt",
+          "title": "AI sistemleri icin kisa NeTT Oto Boya ozeti"
+        },
+        {
+          "rel": "alternate",
+          "type": "text/markdown",
+          "href": "https://nettotoboya.com/ai-answers.md",
+          "title": "Antalya oto boya ve arac toplama sorulari icin cevaplar"
         }
       ]
     },

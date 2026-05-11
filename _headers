@@ -1,0 +1,18 @@
+/*
+  Link: </.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="alternate"; type="text/markdown", </sitemap.xml>; rel="sitemap"
+  X-Robots-Tag: index, follow
+
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
+
+/llms-full.txt
+  Content-Type: text/markdown; charset=utf-8
+
+/ai-answers.md
+  Content-Type: text/markdown; charset=utf-8
+
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; charset=utf-8
+
+/.well-known/api-catalog.json
+  Content-Type: application/linkset+json; charset=utf-8

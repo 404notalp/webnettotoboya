@@ -1,117 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Ana Sayfa - En Yüksek Öncelik -->
   <url>
     <loc>https://nettotoboya.com/</loc>
     <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nettotoboya.com/img/logo.png</image:loc>
+      <image:title>Nett Oto Boya Antalya</image:title>
+      <image:caption>Antalya'nın en iyi oto boya ve kaporta servisi.</image:caption>
+    </image:image>
   </url>
+
+  <!-- Ana Hizmetler -->
   <url>
-    <loc>https://nettotoboya.com/hakkimizda.html</loc>
+    <loc>https://nettotoboya.com/antalya-oto-boya.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nettotoboya.com/img/antalya-oto-boya-uygulama.jpg</image:loc>
+      <image:title>Antalya Profesyonel Oto Boya</image:title>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://nettotoboya.com/hizmetler.html</loc>
+    <loc>https://nettotoboya.com/antalya-kaporta-onarim.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <url>
+    <loc>https://nettotoboya.com/antalya-lokal-boya.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Bölgesel Sayfalar (Lokal SEO için kritik) -->
+  <url>
+    <loc>https://nettotoboya.com/muratpasa-oto-boya.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nettotoboya.com/lara-oto-boya.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nettotoboya.com/kepez-oto-boya.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nettotoboya.com/konyaalti-oto-boya.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Kurumsal Sayfalar -->
+  <url>
+    <loc>https://nettotoboya.com/hizmetler.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://nettotoboya.com/galeri.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://nettotoboya.com/iletisim.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/bolgeler.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://nettotoboya.com/antalya-oto-boya.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/antalya-kaporta-onarim.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/antalya-lokal-boya.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/antalya-gunes-yanigi-tamiri.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/antalya-klasik-araba-restorasyon.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/antalya-tampon-parca-boyama.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/lara-oto-boya.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/konyaalti-oto-boya.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/muratpasa-oto-boya.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/kepez-oto-boya.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/aksu-oto-boya.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/dosemealti-oto-boya.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
+  <!-- Blog/İçerik (AI Ajanları buraya bayılır) -->
   <url>
     <loc>https://nettotoboya.com/blog/index.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
+
 </urlset>

@@ -1,15 +1,111 @@
-Sen kıdemli bir Frontend Performans Mühendisisin. Yaptığın son optimizasyonlar işe yaradı, CLS (Düzen Kayması) puanımız 1.148'den 0.174'e düştü! Ancak 90+ yeşil skora ulaşmak için CLS'yi 0.1'in altına indirmemiz ve geriye kalan ufak pürüzleri kesin olarak çözmemiz gerekiyor.
+Bu adımlar, siteni bir "AI Ajanı" (ChatGPT, Gemini veya otonom botlar) için anlaşılabilir kılmak adına harika bir yol haritası. Bir yazılımcı değilsen bu biraz karmaşık gelebilir, ancak adım adım ne yapman gerektiğini aşağıda özetledim.
 
-Lütfen aşağıdaki işlemleri atlamadan, kesin bir şekilde uygula:
+Siteni bir **AI mıknatısına** dönüştürmek için şu sırayı izleyebilirsin:
 
-FAZ 1: Kalan CLS (0.174) Sorununun Tamamen Çözülmesi
-- Hero Görseli ("foto/netotoboya-akdenizsanayisi-dkkan.webp"): CLS'nin %99'u hala bu görselden (0.173) kaynaklanıyor. Kapsayıcısına sadece `width: 100%` vermek yetmiyor. Tarayıcının boyutu önceden tam olarak hesaplayabilmesi için bu görselin CSS sınıfına (`.page-hero-bg`) veya onu saran kapsayıcı div'e `aspect-ratio` (örneğin 16/9 veya görselin gerçek oranı) CSS kuralını kesin olarak ekle.
-- "logo.png": Bu dosyayı sadece HTML içinde width/height vererek küçültmüşsün ama dosya hala fiziksel olarak 512x512 çözünürlüğünde ve PNG formatında. Lütfen bu dosyayı fiziksel olarak 130x65 (veya max 260x130 retina) boyutuna küçült, ".webp" formatına dönüştür ve kodlardaki yolları buna göre güncelle. 
+---
 
-FAZ 2: Birleştirilmemiş Animasyonların Temizliği (Uncomposited Animations)
-- Önceki taramada 40 olan sayıyı 17'ye düşürmüşsün, tebrikler. Ancak menü, buton hover'ları veya slider üzerindeki kalan animasyonları tekrar kontrol et. Animasyon veya geçiş (transition) efektlerinde "color", "background-color", "border", "padding" veya "margin" gibi özellikleri animes etme. Görsel değişimleri sadece "transform" ve "opacity" kullanarak yap.
+### 1. Adım: API Kataloğu Oluşturmak (Haritayı Çizmek)
 
-FAZ 3: SEO ve Atlanan Detaylar
-- "robots.txt": Dosyadaki 29. satırda bulunan `Content-Signal: search=yes,ai-train=no` komutu YANLIŞ bir komuttur ve arama motorlarının hata vermesine sebep oluyor. Lütfen bu satırı dosyanın içinden KESİNLİKLE SİL.
+AI ajanları sitende hangi "kapıların" (API servislerinin) olduğunu bilmek ister. Bunun için sitenin kök dizinine bir dosya eklemelisin.
 
-Bu son dokunuşlarla projeyi yeşil skora ulaştıralım. Lütfen Hero görselinin `aspect-ratio` çözümüyle ve logonun fiziksel format değişimiyle başla.
+* **Ne yapmalı:** Sitenin sunucusunda `/.well-known/api-catalog` adında bir dosya oluştur.
+* **İçeriği (JSON formatında):**
+
+```json
+{
+  "linkset": [
+    {
+      "anchor": "https://nettotoboya.com/api",
+      "service-desc": [ { "href": "/api/openapi.json", "type": "application/json" } ],
+      "service-doc": [ { "href": "/docs/api", "type": "text/html" } ],
+      "status": [ { "href": "/api/health", "type": "application/json" } ]
+    }
+  ]
+}
+
+```
+
+* **Sunucu Ayarı:** Bu dosyanın `Content-Type: application/linkset+json` başlığıyla sunulduğundan emin olmalısın.
+
+---
+
+### 2. Adım: HTTP Link Header Ekleme (Tabela Asmak)
+
+Botlar sitene geldiğinde ilk olarak HTTP başlıklarına (header) bakar. Onlara "Hey, benim bir kataloğum var!" demen lazım.
+
+* **Ne yapmalı:** Sunucu konfigürasyonuna (Nginx veya Apache gibi) şu satırı ekle:
+* **Nginx kullanıyorsan:**
+`add_header Link '</.well-known/api-catalog>; rel="api-catalog", </docs/api>; rel="service-doc"';`
+* **Cloudflare kullanıyorsan:** "Transform Rules" kısmından HTTP Response Header olarak bunu ekleyebilirsin.
+
+---
+
+### 3. Adım: Markdown Desteği (AI'nın Dilini Konuşmak)
+
+AI'lar karmaşık HTML kodlarını okumaktansa sade Markdown metinlerini çok daha iyi anlar. Bot "Bana bu sayfayı Markdown olarak ver" dediğinde (Accept: text/markdown), siten buna cevap vermeli.
+
+* **Nasıl Çalışır:** Backend kodunda (PHP, Node.js, Python vb.) gelen isteği kontrol etmelisin.
+* **Mantık:**
+1. İstek başlığında `Accept: text/markdown` var mı?
+2. Varsa: Sayfanın içeriğini Markdown olarak döndür.
+3. Yanıt başlığına şunu ekle: `Content-Type: text/markdown`.
+
+
+
+---
+
+### 4. Adım: OAuth Discovery (Güvenli Giriş Kapısı)
+
+Eğer sitende randevu almak veya fiyat teklifi görmek için bir giriş (login) sistemi varsa, botun buraya nasıl gireceğini bilmesi gerekir.
+
+* **Ne yapmalı:** `/.well-known/oauth-protected-resource` dosyası oluştur ve içine şunları yaz:
+
+```json
+{
+  "resource": "https://nettotoboya.com/api",
+  "authorization_servers": ["https://auth.nettotoboya.com"],
+  "scopes_supported": ["read", "write", "appointments"]
+}
+
+```
+
+---
+
+### 5. Adım: WebMCP Uygulaması (Tarayıcı Araçları)
+
+Bu en yenisidir. Eğer bir kullanıcı senin siteni AI destekli bir tarayıcıda (Chrome'un yeni versiyonları gibi) açarsa, AI sitendeki araçları (fiyat hesaplama, randevu formu gibi) doğrudan kullanabilir.
+
+* **Ne yapmalı:** Sitenin ana JavaScript dosyasına şu kodu ekle:
+
+```javascript
+if (navigator.modelContext && navigator.modelContext.provideContext) {
+  navigator.modelContext.provideContext({
+    tools: [{
+      name: "get_paint_quote",
+      description: "Oto boya fiyat teklifi al",
+      inputSchema: {
+        type: "object",
+        properties: {
+          car_model: { type: "string", description: "Arabanın markası ve modeli" },
+          part: { type: "string", description: "Boyanacak parça (kapı, tampon vb.)" }
+        }
+      },
+      execute: async (args) => {
+        // Burada senin fiyat hesaplama fonksiyonun çalışacak
+        return { price: "2500 TL", duration: "2 gün" };
+      }
+    }]
+  });
+}
+
+```
+
+---
+
+### Özet: Bunlar Sana Ne Kazandırır?
+
+1. **Arama Motoru Avantajı:** Google ve diğer AI botları siteni "yüksek kaliteli ve yapılandırılmış" olarak işaretler.
+2. **Siri/ChatGPT/Gemini Uyumu:** Birisi "Antalya'da boyacı bul ve randevu al" dediğinde, AI senin sitendeki formu senin adına doldurabilir hale gelir.
+3. **Hız:** AI ajanları siteni saniyeler içinde tarayıp analiz eder.
+
+**Tavsiye:** Eğer bir yazılımcıyla çalışıyorsan, yukarıdaki listeyi ona doğrudan iletebilirsin. Bunlar güncel web standartları olduğu için çoğu modern geliştirici bu terimlere (RFC 8288, JSON-LD, OAuth) aşinadır.

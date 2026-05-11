@@ -71,7 +71,7 @@ Disallow: /broken_images_log.txt
 Disallow: /all_broken_images_log.txt
 Disallow: /result.txt
 
-Sitemap: https://nettotoboya.com/sitemap.xml
+Sitemap: https://nettotoboya.com/sitemap_index.xml
 
 # AI Agent Discovery
 Allow: /.well-known/agent-skills/

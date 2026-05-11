@@ -1,111 +1,44 @@
-Bu adımlar, siteni bir "AI Ajanı" (ChatGPT, Gemini veya otonom botlar) için anlaşılabilir kılmak adına harika bir yol haritası. Bir yazılımcı değilsen bu biraz karmaşık gelebilir, ancak adım adım ne yapman gerektiğini aşağıda özetledim.
-
-Siteni bir **AI mıknatısına** dönüştürmek için şu sırayı izleyebilirsin:
-
----
-
-### 1. Adım: API Kataloğu Oluşturmak (Haritayı Çizmek)
-
-AI ajanları sitende hangi "kapıların" (API servislerinin) olduğunu bilmek ister. Bunun için sitenin kök dizinine bir dosya eklemelisin.
-
-* **Ne yapmalı:** Sitenin sunucusunda `/.well-known/api-catalog` adında bir dosya oluştur.
-* **İçeriği (JSON formatında):**
-
-```json
 {
-  "linkset": [
+  "system_role": "Kıdemli Yerel SEO Uzmanı, İçerik Stratejisti ve Next.js & Tailwind CSS Web Geliştiricisi",
+  "project_context": {
+    "brand_name": "Nett Oto Boya",
+    "target_location": "Antalya, Türkiye",
+    "industry": "Oto Boya, Kaporta Onarım, Klasik Araç Restorasyonu",
+    "current_problems": [
+      "İçeriklerin kısa ve zayıf olması",
+      "Özellikle BLOG sayfalarında aynı görsellerin sürekli tekrar etmesi",
+      "Uzun kuyruklu (long-tail) yerel arama hacimlerinin kaçırılması"
+    ]
+  },
+  "objectives": {
+    "goal_1": "Google'da yerel otorite kurmak için siteyi derin, kaliteli ve optimize edilmiş içeriklerle büyütmek.",
+    "goal_2": "Görsel tekrarı sorununu çözerek zengin bir medya deneyimi sunmak."
+  },
+  "tasks": [
     {
-      "anchor": "https://nettotoboya.com/api",
-      "service-desc": [ { "href": "/api/openapi.json", "type": "application/json" } ],
-      "service-doc": [ { "href": "/docs/api", "type": "text/html" } ],
-      "status": [ { "href": "/api/health", "type": "application/json" } ]
+      "step": 1,
+      "name": "Kapsamlı Site Denetimi ve Mimari Planlama",
+      "action": "Sitenin mevcut durumunu tarayarak eksik sayfaları ve SEO fırsatlarını bul. Bana adım adım uygulanacak bir 'İçerik ve Geliştirme Yol Haritası' çıkar."
+    },
+    {
+      "step": 2,
+      "name": "Uzun Kuyruklu (Long-Tail) SEO İçerik Üretimi",
+      "action": "'Antalya uygun araç boyama', 'Antalya hasarlı araç kaporta onarımı', 'Akdeniz sanayi oto boyama', 'Antalya lokal boya' gibi kelimeleri kullanarak uzun, teknik ama anlaşılır hizmet ve blog sayfaları yaz. Asla gereksiz kelime kalabalığı (fluff) yapma."
+    },
+    {
+      "step": 3,
+      "name": "Görsel Çeşitlilik Stratejisi (KRİTİK ADIM)",
+      "action": "Özellikle BLOG bölümündeki görsel tekrarını tamamen bitir. Yazdığın her içeriğe bağlama uygun, çeşitli ve yeni 'Görsel Alanları' (Image placeholders) ekle. Her biri için SEO uyumlu alt etiketleri yaz (Örn: alt='Antalya Akdeniz Sanayide fırınlı boya yapılan araç')."
+    },
+    {
+      "step": 4,
+      "name": "Teknik Uygulama ve Kod Çıktısı",
+      "action": "Ürettiğin içerikleri siteme doğrudan ekleyebilmem için bana Next.js ve Tailwind CSS uyumlu, semantik HTML (H1, H2, H3 hiyerarşisi kusursuz) kod blokları olarak ver."
     }
-  ]
+  ],
+  "execution_rules": {
+    "rule_1": "Bütün süreci tek bir devasa mesajda yığıp kafamı karıştırma.",
+    "rule_2": "İlk olarak sadece 1. Adımı (Denetim ve Planlama) yap ve bana yeni eklenecek sayfaların/blogların başlıklarını sun.",
+    "rule_3": "Ben bu planı onayladıktan sonra, diğer adımlara (kodlama ve içerik yazımına) geç."
+  }
 }
-
-```
-
-* **Sunucu Ayarı:** Bu dosyanın `Content-Type: application/linkset+json` başlığıyla sunulduğundan emin olmalısın.
-
----
-
-### 2. Adım: HTTP Link Header Ekleme (Tabela Asmak)
-
-Botlar sitene geldiğinde ilk olarak HTTP başlıklarına (header) bakar. Onlara "Hey, benim bir kataloğum var!" demen lazım.
-
-* **Ne yapmalı:** Sunucu konfigürasyonuna (Nginx veya Apache gibi) şu satırı ekle:
-* **Nginx kullanıyorsan:**
-`add_header Link '</.well-known/api-catalog>; rel="api-catalog", </docs/api>; rel="service-doc"';`
-* **Cloudflare kullanıyorsan:** "Transform Rules" kısmından HTTP Response Header olarak bunu ekleyebilirsin.
-
----
-
-### 3. Adım: Markdown Desteği (AI'nın Dilini Konuşmak)
-
-AI'lar karmaşık HTML kodlarını okumaktansa sade Markdown metinlerini çok daha iyi anlar. Bot "Bana bu sayfayı Markdown olarak ver" dediğinde (Accept: text/markdown), siten buna cevap vermeli.
-
-* **Nasıl Çalışır:** Backend kodunda (PHP, Node.js, Python vb.) gelen isteği kontrol etmelisin.
-* **Mantık:**
-1. İstek başlığında `Accept: text/markdown` var mı?
-2. Varsa: Sayfanın içeriğini Markdown olarak döndür.
-3. Yanıt başlığına şunu ekle: `Content-Type: text/markdown`.
-
-
-
----
-
-### 4. Adım: OAuth Discovery (Güvenli Giriş Kapısı)
-
-Eğer sitende randevu almak veya fiyat teklifi görmek için bir giriş (login) sistemi varsa, botun buraya nasıl gireceğini bilmesi gerekir.
-
-* **Ne yapmalı:** `/.well-known/oauth-protected-resource` dosyası oluştur ve içine şunları yaz:
-
-```json
-{
-  "resource": "https://nettotoboya.com/api",
-  "authorization_servers": ["https://auth.nettotoboya.com"],
-  "scopes_supported": ["read", "write", "appointments"]
-}
-
-```
-
----
-
-### 5. Adım: WebMCP Uygulaması (Tarayıcı Araçları)
-
-Bu en yenisidir. Eğer bir kullanıcı senin siteni AI destekli bir tarayıcıda (Chrome'un yeni versiyonları gibi) açarsa, AI sitendeki araçları (fiyat hesaplama, randevu formu gibi) doğrudan kullanabilir.
-
-* **Ne yapmalı:** Sitenin ana JavaScript dosyasına şu kodu ekle:
-
-```javascript
-if (navigator.modelContext && navigator.modelContext.provideContext) {
-  navigator.modelContext.provideContext({
-    tools: [{
-      name: "get_paint_quote",
-      description: "Oto boya fiyat teklifi al",
-      inputSchema: {
-        type: "object",
-        properties: {
-          car_model: { type: "string", description: "Arabanın markası ve modeli" },
-          part: { type: "string", description: "Boyanacak parça (kapı, tampon vb.)" }
-        }
-      },
-      execute: async (args) => {
-        // Burada senin fiyat hesaplama fonksiyonun çalışacak
-        return { price: "2500 TL", duration: "2 gün" };
-      }
-    }]
-  });
-}
-
-```
-
----
-
-### Özet: Bunlar Sana Ne Kazandırır?
-
-1. **Arama Motoru Avantajı:** Google ve diğer AI botları siteni "yüksek kaliteli ve yapılandırılmış" olarak işaretler.
-2. **Siri/ChatGPT/Gemini Uyumu:** Birisi "Antalya'da boyacı bul ve randevu al" dediğinde, AI senin sitendeki formu senin adına doldurabilir hale gelir.
-3. **Hız:** AI ajanları siteni saniyeler içinde tarayıp analiz eder.
-
-**Tavsiye:** Eğer bir yazılımcıyla çalışıyorsan, yukarıdaki listeyi ona doğrudan iletebilirsin. Bunlar güncel web standartları olduğu için çoğu modern geliştirici bu terimlere (RFC 8288, JSON-LD, OAuth) aşinadır.

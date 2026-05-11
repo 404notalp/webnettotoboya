@@ -28,7 +28,7 @@ const ICONS = {
   building: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>`
 };
 function renderHeader(activePage) {
-  const basePath = window.location.pathname.includes('/blog/') ? '../' : '';
+  const basePath = window.location.pathname.includes('/blog/') || window.location.pathname.includes('/hizmetler/') ? '../' : '';
 
   const nav = [
     { label: 'Anasayfa', href: 'index.html' },
@@ -44,7 +44,9 @@ function renderHeader(activePage) {
         { label: 'Macun & Astar', href: 'antalya-macun-astar-islemleri.html' },
         { label: 'Restorasyon', href: 'antalya-klasik-araba-restorasyon.html' },
         { label: 'Araç Toplama', href: 'antalya-arac-toplama.html' },
-        { label: 'Güneş Yanığı', href: 'antalya-gunes-yanigi-tamiri.html' }
+        { label: 'Güneş Yanığı', href: 'antalya-gunes-yanigi-tamiri.html' },
+        { label: 'Uygun Araç Boyama', href: 'hizmetler/antalya-uygun-arac-boyama.html' },
+        { label: 'Hasarlı Kaporta', href: 'hizmetler/antalya-hasarli-arac-kaporta-onarimi.html' }
       ]
     },
     { label: 'Bölgeler', href: 'bolgeler.html' },
@@ -115,7 +117,7 @@ function renderHeader(activePage) {
   }, { passive: true });
 }
 function renderFooter() {
-  const basePath = window.location.pathname.includes('/blog/') ? '../' : '';
+  const basePath = window.location.pathname.includes('/blog/') || window.location.pathname.includes('/hizmetler/') ? '../' : '';
 
   const footer = document.createElement('footer');
   footer.className = 'site-footer';

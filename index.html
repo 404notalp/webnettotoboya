@@ -27,7 +27,8 @@
     .header-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
     .header-logo{display:flex;align-items:center;height:100%}
     .header-logo img{max-height:65px;width:auto}
-    .page-hero{height:100vh;background:#000;position:relative;display:flex;align-items:center;justify-content:center}
+    .page-hero{height:100vh;min-height:500px;background:#000;position:relative;display:flex;align-items:center;justify-content:center}
+.page-hero-bg{aspect-ratio:16/9;width:100%;height:100%;object-fit:cover}
     .hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:0 24px}
     .hero-content h1{font-family:var(--font-heading);font-size:clamp(2.5rem,8vw,5rem);line-height:1.05;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:20px}
     .hero-content p{font-size:1.1rem;color:var(--text-secondary);margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
@@ -217,7 +218,7 @@
         <div class="before-after-card fade-in">
           <div class="ba-images">
             <div class="ba-half">
-              <img src="foto/netotoboya-bmw-boyama.webp" alt="Ağır Hasar Öncesi" width="300" height="200" loading="lazy">
+              <picture><source srcset="foto/netotoboya-bmw-boyama-mobil.webp" media="(max-width: 768px)"><img src="foto/netotoboya-bmw-boyama.webp" alt="Ağır Hasar Öncesi" width="300" height="200" loading="lazy"></picture>
               <span class="ba-label">Öncesi</span>
             </div>
             <div class="ba-half">
@@ -234,11 +235,11 @@
         <div class="before-after-card fade-in">
           <div class="ba-images">
             <div class="ba-half">
-              <img src="foto/mus/1.webp" alt="Çizik Onarımı Öncesi" width="300" height="375" loading="lazy">
+              <picture><source srcset="foto/mus/1-mobil.webp" media="(max-width: 768px)"><img src="foto/mus/1.webp" alt="Çizik Onarımı Öncesi" width="300" height="375" loading="lazy"></picture>
               <span class="ba-label">Öncesi</span>
             </div>
             <div class="ba-half">
-              <img src="foto/mus/2.webp" alt="Çizik Onarımı Sonrası" width="300" height="375" loading="lazy">
+              <picture><source srcset="foto/mus/2-mobil.webp" media="(max-width: 768px)"><img src="foto/mus/2.webp" alt="Çizik Onarımı Sonrası" width="300" height="375" loading="lazy"></picture>
               <span class="ba-label" style="background:var(--accent-yellow); color:#000">Sonrası</span>
             </div>
           </div>
@@ -251,11 +252,11 @@
         <div class="before-after-card fade-in">
           <div class="ba-images">
             <div class="ba-half">
-              <img src="foto/beforeafter/before (3).webp" alt="Göçük Düzeltme Öncesi" width="300" height="375" loading="lazy">
+              <picture><source srcset="foto/beforeafter/before (3)-mobil.webp" media="(max-width: 768px)"><img src="foto/beforeafter/before (3).webp" alt="Göçük Düzeltme Öncesi" width="300" height="375" loading="lazy"></picture>
               <span class="ba-label">Öncesi</span>
             </div>
             <div class="ba-half">
-              <img src="foto/beforeafter/after (3).webp" alt="Göçük Düzeltme Sonrası" width="300" height="375" loading="lazy">
+              <picture><source srcset="foto/beforeafter/after (3)-mobil.webp" media="(max-width: 768px)"><img src="foto/beforeafter/after (3).webp" alt="Göçük Düzeltme Sonrası" width="300" height="375" loading="lazy"></picture>
               <span class="ba-label" style="background:var(--accent-yellow); color:#000">Sonrası</span>
             </div>
           </div>

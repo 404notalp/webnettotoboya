@@ -129,11 +129,11 @@ function renderFooter() {
           <p style="color:var(--text-secondary); max-width:280px; font-size:0.9rem; line-height:1.8">Antalya'nın zirve otomobil atölyesi. Kusursuz işçilik, Fırınlı boya ve kaporta sanatı.</p>
           <div style="margin-top:20px; display:flex; gap:8px">
             <a href="${CONFIG.mapsUrl}" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; font-size:0.8rem; color:var(--text-muted); border:1px solid var(--border); padding:8px 14px; border-radius:20px">${ICONS.map} Konum</a>
-            <a href="${CONFIG.whatsapp}" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; font-size:0.8rem; color:#25D366; border:1px solid rgba(37,211,102,0.3); padding:8px 14px; border-radius:20px">WhatsApp</a>
+            <a href="${CONFIG.whatsapp}" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; font-size:0.8rem; color:#128C7E; border:1px solid rgba(37,211,102,0.3); padding:8px 14px; border-radius:20px">WhatsApp</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Kurumsal</h4>
+          <h3>Kurumsal</h3>
           <ul class="footer-links">
             <li><a href="${basePath}hakkimizda.html">Hakkımızda</a></li>
             <li><a href="${basePath}iletisim.html">İletişim & Konum</a></li>
@@ -143,7 +143,7 @@ function renderFooter() {
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Hizmetler</h4>
+          <h3>Hizmetler</h3>
           <ul class="footer-links">
             <li><a href="${basePath}antalya-oto-boya.html">Oto Boya</a></li>
             <li><a href="${basePath}antalya-kaporta-onarim.html">Kaporta Onarım</a></li>
@@ -154,12 +154,12 @@ function renderFooter() {
           </ul>
         </div>
         <div class="footer-col">
-          <h4>İletişim</h4>
+          <h3>İletişim</h3>
           <ul class="footer-links">
             <li>Adres: ${CONFIG.address}</li>
             <li>Telefon: <a href="${CONFIG.phoneTel}" style="color:var(--accent-yellow); font-weight:700">${CONFIG.phone}</a></li>
             <li>Saatler: ${CONFIG.hours} (Pzt–Cmt)</li>
-            <li><a href="${CONFIG.whatsapp}" target="_blank" style="color:#25D366">WhatsApp'tan Teklif Al</a></li>
+            <li><a href="${CONFIG.whatsapp}" target="_blank" style="color:#128C7E">WhatsApp'tan Teklif Al</a></li>
           </ul>
         </div>
       </div>
@@ -195,7 +195,7 @@ function renderTestimonials() {
           <div class="testimonial-card fade-in" itemscope itemtype="https://schema.org/Review">
             <div class="stars">${'★'.repeat(r.stars)}</div>
             <p itemprop="reviewBody">"${r.text}"</p>
-            <h4 itemprop="author">${r.name}</h4>
+            <h3 itemprop="author">${r.name}</h3>
             <span>${r.location} · Doğrulanmış Müşteri</span>
           </div>
         `).join('')}
@@ -219,7 +219,7 @@ function renderStickyCTA() {
   mobileBar.className = 'mobile-call-bar';
   mobileBar.innerHTML = `
     <a href="${CONFIG.phoneTel}" class="btn btn-primary" style="flex:1">${ICONS.phone} Hemen Ara</a>
-    <a href="${CONFIG.whatsapp}${CONFIG.whatsappText}" class="btn btn-secondary" style="flex:1; background:#25D366; border-color:#25D366; color:#fff">${ICONS.whatsapp} WhatsApp</a>
+    <a href="${CONFIG.whatsapp}${CONFIG.whatsappText}" class="btn btn-secondary" style="flex:1; background:#128C7E; border-color:#128C7E; color:#fff">${ICONS.whatsapp} WhatsApp</a>
   `;
   document.body.appendChild(mobileBar);
 }

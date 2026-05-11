@@ -1,39 +1,23 @@
 # robots.txt - nettotoboya.com
 # Son guncelleme: 2026-05-11
 
-# Arama motorlari ve AI/LLM tarayicilari icin site acik.
+# Tüm standart botlar ve AI tarayıcıları için genel kurallar
 User-agent: *
-User-agent: Googlebot
-User-agent: Bingbot
-User-agent: Yandex
-User-agent: DuckDuckBot
-User-agent: GPTBot
-User-agent: ChatGPT-User
-User-agent: Google-Extended
-User-agent: CCBot
-User-agent: PerplexityBot
-User-agent: Claude-Web
-User-agent: anthropic-ai
 Allow: /
 Allow: /.well-known/
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /ai-answers.md
+
+# Sistem klasörleri ve geliştirici scriptlerini engelleme
 Disallow: /_backup/
-Disallow: /fix_typos.py
-Disallow: /fix_images.py
-Disallow: /fix_images2.py
-Disallow: /fix_links.py
-Disallow: /fix_favicon.py
-Disallow: /check_images.py
-Disallow: /check_all_images.py
-Disallow: /update_blogs.py
-Disallow: /convert_webp.py
-Disallow: /convert_all_to_webp.py
-Disallow: /patch_html_perf.py
-Disallow: /broken_images_log.txt
-Disallow: /all_broken_images_log.txt
+Disallow: /*.py$
+Disallow: /*_log.txt$
 Disallow: /result.txt
 
-Sitemap: https://nettotoboya.com/sitemap.xml
+# Altyapı ve API dosyalarını engelleme (Tarama bütçesini korumak için)
+Disallow: /_next/
+Disallow: /api/
+
+# Site haritaları (Sadece sitemap_index.xml yeterlidir, diğerini kapsar)
 Sitemap: https://nettotoboya.com/sitemap_index.xml

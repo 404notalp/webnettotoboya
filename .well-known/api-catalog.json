@@ -6,12 +6,28 @@
         {
           "rel": "service-doc",
           "href": "https://nettotoboya.com/",
-          "hreflang": "tr"
+          "hreflang": "tr",
+          "title": "NeTT Oto Boya Ana Sayfa"
         },
         {
           "rel": "alternate",
           "type": "text/html",
           "href": "https://nettotoboya.com/"
+        },
+        {
+          "rel": "sitemap",
+          "href": "https://nettotoboya.com/sitemap.xml"
+        }
+      ]
+    },
+    {
+      "anchor": "https://nettotoboya.com/hizmetler.html",
+      "links": [
+        {
+          "rel": "service-doc",
+          "href": "https://nettotoboya.com/hizmetler.html",
+          "hreflang": "tr",
+          "title": "Hizmetlerimiz"
         }
       ]
     },
@@ -21,17 +37,18 @@
         {
           "rel": "service-doc",
           "href": "https://nettotoboya.com/iletisim.html",
-          "hreflang": "tr"
+          "hreflang": "tr",
+          "title": "İletişim Bilgileri"
         }
       ]
     },
     {
-      "anchor": "https://nettotoboya.com/api/whatsapp",
+      "anchor": "https://nettotoboya.com/.well-known/agent-skills/index.json",
       "links": [
         {
-          "rel": "service-desc",
-          "href": "https://nettotoboya.com/api/whatsapp",
-          "title": "WhatsApp iletişim endpointi"
+          "rel": "agent-skills",
+          "href": "https://nettotoboya.com/.well-known/agent-skills/index.json",
+          "title": "AI Agent Skills Index"
         }
       ]
     }

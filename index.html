@@ -606,6 +606,35 @@
       initPage({ activePage: 'index.html' });
     });
   </script>
+  <!-- WebMCP Tools for AI Agents -->
+  <script>
+    if ('modelContext' in navigator) {
+      navigator.modelContext.provide({
+        tools: [
+          {
+            name: 'get_contact_info',
+            description: 'NeTT Oto Boya iletişim bilgilerini getir - telefon, adres, çalışma saatleri',
+            inputSchema: { type: 'object', properties: {} }
+          },
+          {
+            name: 'get_services',
+            description: 'NeTT oto boya hizmetlerini listele - oto boya, kaporta, lokal boya, güneş yanığı, restorasyon',
+            inputSchema: { type: 'object', properties: {} }
+          },
+          {
+            name: 'get_pricing',
+            description: 'Fiyat teklifi al - WhatsApp üzerinden araç fotoğrafı göndererek tahmini onarım bedeli',
+            inputSchema: {
+              type: 'object',
+              properties: {
+                action: { type: 'string', description: 'WhatsApp aç' }
+              }
+            }
+          }
+        ]
+      });
+    }
+  </script>
 </body>
 
 </html>

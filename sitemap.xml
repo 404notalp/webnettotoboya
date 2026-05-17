@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nettotoboya.com/</loc>
@@ -427,6 +427,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://nettotoboya.com/gizlilik-politikasi.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
     <loc>https://nettotoboya.com/hakkimizda.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -475,10 +481,34 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://nettotoboya.com/hizmetler/firinli-oto-boya.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://nettotoboya.com/hizmetler/gunes-yanigi-onarimi.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://nettotoboya.com/hizmetler/kaporta-duzeltme-antalya.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://nettotoboya.com/hizmetler/kaporta-onarimi-lokal-hasar.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://nettotoboya.com/hizmetler/komple-arac-toplama-restorasyon.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://nettotoboya.com/hizmetler/mini-onarim-antalya.html</loc>
@@ -540,37 +570,4 @@
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
-<<<<<<< HEAD
-  <url>
-    <loc>https://nettotoboya.com/hizmetler/firinli-oto-boya.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/hizmetler/gunes-yanigi-onarimi.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/hizmetler/kaporta-onarimi-lokal-hasar.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/hizmetler/komple-arac-toplama-restorasyon.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://nettotoboya.com/gizlilik-politikasi.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
-  </url>
-=======
->>>>>>> 02a0bd429fd5c9575645d05bb8a79a59909c17ee
 </urlset>

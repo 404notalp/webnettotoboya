@@ -1,0 +1,71 @@
+{
+  "site_wide_settings": {
+    "brand_name": "Nett Oto Boya",
+    "base_url": "https://nettotoboya.com"
+  },
+  "sitemap_all_links_metadata": {
+    "homepage": {
+      "url": "https://nettotoboya.com/",
+      "title": "Nett Oto Boya | Fırınlı Oto Boya & Kaporta Onarım",
+      "description": "Fırınlı oto boya, kaporta onarım ve komple araç toplama hizmetleri. Güneş yanığı onarımı ve orijinal renk garantisiyle profesyonel işçilik. Hemen fiyat alın!",
+      "keywords": "fırınlı oto boya, oto kaporta boya, kaporta onarım, güneş yanığı onarımı, komple araç toplama, lokal hasar onarımı, plastik parça tamiri, orijinal renk garantisi, nettotoboya"
+    },
+    "services_main": {
+      "url": "https://nettotoboya.com/hizmetler",
+      "title": "Oto Boya ve Kaporta Hizmetleri | Fırınlı Boya Kabini",
+      "description": "Fırınlı komple araç boyama, lokal hasar onarımı, parça boyama ve plastik parça tamiri. Kusursuz renk eşleşmesi ve orijinal renk garantili kaporta boya işçiliği.",
+      "keywords": "fırınlı oto boya, kaporta onarım, lokal hasar onarımı, parça boyama, plastik parça tamiri, tampon tamiri, mikron boya işçiliği, fırınlı boya kabini"
+    },
+    "firinli_boya_detail": {
+      "url": "https://nettotoboya.com/hizmetler/firinli-oto-boya",
+      "title": "Profesyonel Fırınlı Komple Boya Fiyatları & İşçilik",
+      "description": "Mikron boya standartlarında, orijinal renk koduna sadık kalarak fırınlı boya kabininde komple araç boyama hizmeti. Kusursuz renk ve ton tutturma garantisi.",
+      "keywords": "fırınlı oto boya, komple araç boyama fiyatları, fırın boya kabini, oto boyacı usta, mikron oto boya"
+    },
+    "gunes_yanigi_detail": {
+      "url": "https://nettotoboya.com/hizmetler/gunes-yanigi-onarimi",
+      "title": "Güneş Yanığı Onarımı & Vernik Temizleme Boyama",
+      "description": "Güneşten kavrulan, verniği atan araçlar için orijinal renk garantili güneş yanığı temizleme ve boyama çözümleri. Aracınız ilk günkü parlaklığına kavuşsun.",
+      "keywords": "güneş yanığı onarımı, güneş yanığı boyama, vernik yanığı tamiri, araç güneş yanığı temizleme, tavan güneş yanığı boyama"
+    },
+    "kaporta_hasar_detail": {
+      "url": "https://nettotoboya.com/hizmetler/kaporta-onarimi-lokal-hasar",
+      "title": "Oto Kaporta Onarım & Lokal Parça Boyama Hizmeti",
+      "description": "Kaza, sürtme ve çarpma kaynaklı kaporta hasarlarının titizlikle düzeltilmesi. Lokal parça boya ve derin çizik giderme ile değer kaybını önleyen onarım.",
+      "keywords": "kaporta onarım, lokal hasar onarımı, parça boyama, derin çizik giderme, tampon tamiri, plastik parça onarımı"
+    },
+    "komple_toplama_detail": {
+      "url": "https://nettotoboya.com/hizmetler/komple-arac-toplama-restorasyon",
+      "title": "Komple Araç Toplama & Hasarlı Pert Restorasyonu",
+      "description": "Klasik araçlardan ağır hasarlı ve pert araçlara kadar komple revizyon, şase ve kaporta restorasyon hizmetleri. Baştan sona kusursuz işçilik.",
+      "keywords": "komple araç toplama, araç restorasyonu, hasarlı araç onarımı, pert araç toplama, klasik araba revizyonu"
+    },
+    "gallery_main": {
+      "url": "https://nettotoboya.com/galeri",
+      "title": "Boya & Kaporta Galerimiz | Komple Araç Toplama Referansları",
+      "description": "Fırınlı komple boya, ağır hasar onarımı ve pert araç restorasyonu projelerimizin öncesi-sonrası fotoğrafları. Kusursuz işçiliğimizi canlı inceleyin.",
+      "keywords": "komple araç toplama, araç restorasyonu, hasarlı araç onarımı, pert araç toplama, derin çizik giderme, güneş yanığı boyama, öncesi sonrası oto boya"
+    },
+    "contact_main": {
+      "url": "https://nettotoboya.com/iletisim",
+      "title": "İletişim & WhatsApp Hızlı Fiyat | Akdeniz Sanayi Sitesi",
+      "description": "Aracınızın fotoğrafını WhatsApp'tan gönderin, 15 dakikada fiyat teklifi alın. Akdeniz Sanayi Sitesi kaporta boya ustası iletişim bilgileri ve konum haritası.",
+      "keywords": "whatsapp hızlı fiyat, kaporta boya fiyat teklifi, akdeniz sanayi sitesi oto boyacı, kaporta ustası iletişim, nett oto boya telefon"
+    },
+    "privacy_policy": {
+      "url": "https://nettotoboya.com/gizlilik-politikasi",
+      "title": "Gizlilik Politikası | Nett Oto Boya",
+      "description": "Nett Oto Boya kurumsal web sitesi gizlilik politikası ve kullanıcı veri güvenliği bilgilendirme sayfası.",
+      "keywords": "nett oto boya gizlilik politikası, veri güvenliği"
+    }
+  },
+  "homepage_content": {
+    "hero_section": {
+      "h1": "Profesyonel Fırınlı Oto Boya & Kaporta Onarım Mekanı",
+      "subtext": "Aracınızdaki hasarları, lokal vurukları ve kronik güneş yanıklarını orijinal renk garantisi ve kusursuz işçilikle ortadan kaldırıyoruz."
+    }
+  },
+  "trust_badges": {
+    "armut_button_html": "<a href=\"https://armut.com/hizmetveren/tolga-tovac-antalya-kepez-oto-boya_70337728\" target=\"_blank\" rel=\"noopener\" style=\"display:flex; align-items:center; gap:6px; padding:8px 14px; border-radius:20px; background:rgba(120,184,43,0.15); border:1px solid rgba(120,184,43,0.3); font-size:0.75rem; color:#78B82B; font-weight:600; text-decoration:none\">Armut.com</a>"
+  }
+}

@@ -2,8 +2,10 @@
 """Tüm JPG/PNG dosyalarını WebP'ye dönüştür"""
 import os
 from PIL import Image
+from pathlib import Path
 
-foto_dir = r"C:\Users\Alpy\Desktop\222\foto"
+ROOT = Path(__file__).resolve().parent
+foto_dir = ROOT / "foto"
 converted = []
 skipped = []
 

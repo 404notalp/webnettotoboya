@@ -1,7 +1,7 @@
-import os
 import re
+from pathlib import Path
 
-directory = r'C:\Users\Alpy\Desktop\222'
+ROOT = Path(__file__).resolve().parent
 
 replacements = {
     r'foto/beforeafter2/before \(1\)\.jpg': r'foto/beforeafter/before (1).jpeg',
@@ -19,18 +19,13 @@ replacements = {
     r'ara_hasar_onarm\.jpg': r'ara_hasar_onarm.jpg',
 }
 
-for root, _, files in os.walk(directory):
-    for f in files:
-        if f.endswith('.html'):
-            filepath = os.path.join(root, f)
-            with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
-                content = file.read()
-                
-            original_content = content
-            for old, new in replacements.items():
-                content = re.sub(old, new, content)
-                
-            if content != original_content:
-                with open(filepath, 'w', encoding='utf-8') as file:
-                    file.write(content)
-                print(f"Updated {filepath}")
+for filepath in ROOT.rglob('*.html'):
+    content = filepath.read_text(encoding='utf-8', errors='ignore')
+    original_content = content
+
+    for old, new in replacements.items():
+        content = re.sub(old, new, content)
+
+    if content != original_content:
+        filepath.write_text(content, encoding='utf-8')
+        print(f"Updated {filepath.relative_to(ROOT)}")

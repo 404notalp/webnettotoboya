@@ -19,5 +19,5 @@ Disallow: /result.txt
 Disallow: /_next/
 Disallow: /api/
 
-# Site haritaları (Sadece sitemap_index.xml yeterlidir, diğerini kapsar)
-Sitemap: https://nettotoboya.com/sitemap_index.xml
+# Site haritası (Tek ve eksiksiz sitemap.xml dosyası yeterlidir)
+Sitemap: https://nettotoboya.com/sitemap.xml

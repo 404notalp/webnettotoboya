@@ -1,28 +1,30 @@
-import os
+from pathlib import Path
 import re
 
-base_dir = r'C:\Users\Alpy\Desktop\222'
+ROOT = Path(__file__).resolve().parent
+SKIP_DIRS = {'.git', '_backup', 'node_modules'}
 
 broken_links = []
 
-for root, _, files in os.walk(base_dir):
-    for f in files:
-        if f.endswith('.html'):
-            file_path = os.path.join(root, f)
-            with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
-                content = file.read()
-            
-            img_srcs = re.findall(r'<img[^>]+src=[\'"]([^\'"]+)[\'"]', content)
-            for src in img_srcs:
-                if src.startswith('http') or src.startswith('data:'):
-                    continue
-                    
-                file_dir = os.path.dirname(file_path)
-                img_abs_path = os.path.normpath(os.path.join(file_dir, src))
-                
-                if not os.path.exists(img_abs_path):
-                    broken_links.append((file_path, src))
+for file_path in ROOT.rglob('*.html'):
+    if any(part in SKIP_DIRS for part in file_path.parts):
+        continue
 
-with open('all_broken_images_log.txt', 'w', encoding='utf-8') as f:
-    for b in broken_links:
-        f.write(f'{b[0]} -> {b[1]}\n')
+    content = file_path.read_text(encoding='utf-8', errors='ignore')
+    img_srcs = re.findall(r'<img[^>]+src=[\'"]([^\'"]+)[\'"]', content)
+
+    for src in img_srcs:
+        if src.startswith(('http', 'data:', '//')):
+            continue
+
+        img_abs_path = (file_path.parent / src.split('#')[0].split('?')[0]).resolve()
+        if not img_abs_path.exists():
+            broken_links.append((file_path.relative_to(ROOT), src))
+
+(ROOT / 'all_broken_images_log.txt').write_text(
+    ''.join(f'{path} -> {src}\n' for path, src in broken_links),
+    encoding='utf-8'
+)
+
+print(f'Checked HTML files under {ROOT}')
+print(f'Broken images: {len(broken_links)}')

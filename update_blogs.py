@@ -1,7 +1,9 @@
 import os
 import re
+from pathlib import Path
 
-blog_dir = r"C:\Users\Alpy\Desktop\222\blog"
+ROOT = Path(__file__).resolve().parent
+blog_dir = ROOT / "blog"
 
 files_and_images = {
     "antalya-iklimine-uygun-boya-koruma.html": "blog_ceramic.png",

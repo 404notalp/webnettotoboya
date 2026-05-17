@@ -1,0 +1,76 @@
+{
+  "instruction_set": {
+    "role": "Senior Front-End Developer and UI/UX Designer",
+    "context": "Color harmony and visual unification of header and footer navigation/social components for 'nettotoboya.com'. Ensure all secondary platforms fit the premium dark-mode luxury automotive studio aesthetic.",
+    "global_requirements": [
+      "Eliminate conflicting raw brand colors on initial paint to maintain a cohesive premium dark-mode aesthetic.",
+      "Preserve existing flex/gap layouts while implementing rigid component dimensional alignment.",
+      "Ensure fluid CSS transitions between default minimalist states and branded interactive states."
+    ]
+  },
+  "tasks": {
+    "visual_unification": {
+      "issue": "The raw green color of the Armut button and mismatched icon styles disrupt the premium dark palette (deep black canvas with curated yellow/gold details) visible in both header and footer layers.",
+      "specifications": {
+        "default_state": {
+          "description": "Monochrome, low-contrast minimalist appearance across all secondary utility nodes (Armut, Instagram, Location, Phone).",
+          "css_rules": {
+            "background": "transparent or minimal opacity overlay (e.g., rgba(255, 255, 255, 0.03))",
+            "border": "1px solid rgba(255, 255, 255, 0.15)",
+            "color": "#FFFFFF or muted silver #E0E0E0 for typography and integrated SVGs"
+          }
+        },
+        "interactive_states": {
+          "description": "Smooth CSS transitions that reveal contextual brand identities strictly on hover interaction.",
+          "targets": [
+            {
+              "component": "Armut Button",
+              "hover_css": {
+                "background": "rgba(120, 184, 43, 0.2)",
+                "border-color": "#78B82B",
+                "color": "#78B82B"
+              }
+            },
+            {
+              "component": "Instagram Button",
+              "hover_css": {
+                "background": "rgba(225, 48, 108, 0.1)",
+                "border-color": "#E1306C",
+                "color": "#E1306C"
+              }
+            },
+            {
+              "component": "Location & Phone Icon Containers",
+              "hover_css": {
+                "background": "rgba(255, 215, 0, 0.1)",
+                "border-color": "Sitetewide Brand Yellow/Gold Accent",
+                "color": "Sitewide Brand Yellow/Gold Accent"
+              }
+            }
+          ],
+          "transition_curve": "all 0.3s ease-in-out"
+        }
+      }
+    },
+    "layout_and_structural_alignment": {
+      "circle_buttons": {
+        "components": ["Instagram", "Location", "Phone Icons"],
+        "geometry": {
+          "width": "44px",
+          "height": "44px",
+          "border-radius": "50%",
+          "display": "flex",
+          "align-items": "center",
+          "justify-content": "center"
+        }
+      },
+      "capsule_buttons": {
+        "components": ["Armut"],
+        "alignment_rule": "Must maintain exact vertical center-alignment relative to adjacent 44px circular nodes across desktop rows and responsive mobile states to prevent layout shifts."
+      }
+    }
+  },
+  "output_specification": {
+    "format": "Return only the refactored, production-ready JSX/HTML markup structures utilizing clean class architecture (Tailwind CSS or Tailwind inline variants). Exclude supplementary prose or conversational markdown commentary."
+  }
+}

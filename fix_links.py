@@ -1,19 +1,13 @@
-import os
 import re
+from pathlib import Path
 
-directory = r'C:\Users\Alpy\Desktop\222'
+ROOT = Path(__file__).resolve().parent
 
-for root, _, files in os.walk(directory):
-    for f in files:
-        if f.endswith('.html'):
-            filepath = os.path.join(root, f)
-            with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
-                content = file.read()
-                
-            original_content = content
-            content = re.sub(r'antalya-cÇÇizik-onarım\.html', r'antalya-cizik-onarim.html', content)
-                
-            if content != original_content:
-                with open(filepath, 'w', encoding='utf-8') as file:
-                    file.write(content)
-                print(f"Updated link in {filepath}")
+for filepath in ROOT.rglob('*.html'):
+    content = filepath.read_text(encoding='utf-8', errors='ignore')
+    original_content = content
+    content = re.sub(r'antalya-cÇÇizik-onarım\.html', r'antalya-cizik-onarim.html', content)
+
+    if content != original_content:
+        filepath.write_text(content, encoding='utf-8')
+        print(f"Updated link in {filepath.relative_to(ROOT)}")

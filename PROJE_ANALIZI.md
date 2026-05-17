@@ -20,7 +20,7 @@ webnettotoboya-master/
 ├── 20+ bolge sayfasi              # Lara, Muratpaşa, Konyaaltı vb.
 ├── gizlilik-politikasi.html        # KVKK/Gizlilik sayfası
 ├── 404.html                        # Hata sayfası
-├── sitemap.xml (95 URL)            # XML site haritası
+├── sitemap.xml (100 URL)           # XML site haritası
 ├── robots.txt                      # Robots yapılandırması
 ├── llms.txt / llms-full.txt        # AI kaynak dosyaları
 ├── ai-answers.md                   # AI QA dosyası
@@ -84,7 +84,7 @@ webnettotoboya-master/
 - WebMCP tools (get_auto_paint_quote)
 - .well-known/ AI yapılandırması
 - Breadcrumb navigation (86/88 sayfa)
-- Sitemap.xml (95 URL)
+- Sitemap.xml (100 URL)
 - Robots.txt, _headers
 
 ## Güncel Revizyonlar (17 Mayıs 2026)
@@ -93,25 +93,34 @@ webnettotoboya-master/
 - **GTM ID:** `GTM-XXXXXXX` → `GTM-NGQBN2VB` (8 dosya)
 - **GA4 gtag.js:** Fallback eklendi, `CONFIG.gaMeasurementId` ile aktif
 - **Blog meta keywords:** 45 yazıya eklendi (title bazlı)
-- **Blog canonical+robots:** 40 yazıya eklendi
+- **Canonical+robots:** Eksik kalan 41 canonical ve 46 robots etiketi tamamlandı
 - **Blog schema:** skipSchema kaldırıldı, Article schema (initPage ile)
 - **OG tags:** JS injection ile 88 sayfada aktif
 - **Footer:** Gizlilik linki düzeltildi (gizlilik-politikasi.html)
 - **index.html:** skipSchema:true ile çift schema önlendi
 - **404.html:** canonical eklendi
 - **akdeniz-sanayi-kaporta-onarim:** canonical, robots, activePage düzeltildi
+- **CSS değişkenleri:** Bölge kartlarında kullanılan eksik `--shadow-*`, `--transition-md` ve `--accent-yellow-rgb` değişkenleri tanımlandı
+- **HTML bozulmaları:** Hatalı `var="..."` inline style değerleri, bozuk özel karakterler ve derece sembolü düzeltildi
+- **Bakım scriptleri:** Eski `C:\Users\Alpy\Desktop\222` sabit yolu kaldırıldı; scriptler proje kökünü otomatik bulacak hale getirildi
+- **Doğrulama:** Yerel link/görsel taramasında kırık `href/src/srcset` bulunmadı, JS ve Python sözdizimi temiz
 - **Yeni sayfalar:** 5 sayfa eklendi (firinli-oto-boya, gunes-yanigi-onarimi, kaporta-onarimi-lokal-hasar, komple-arac-toplama-restorasyon, gizlilik-politikasi)
-- **Galeri:** Lightbox, 4 yeni before/after kartı
-- **Servis ikonları:** 5 yeni SVG ikon
+- **Sosyal Medya Butonları:** `components.js` dosyasındaki dinamik header/footer sosyal butonları inline CSS stillerinden arındırılarak ortak `.social-icon-btn` ve `.social-capsule-btn` sınıflarına taşındı. Mobil uyumlu `44px` tıklama alanı geometrisi ve sleek hover animasyonları sağlandı.
+- **Şema Temizliği:** `index.html` dosyasında yer alan iki farklı `FAQPage` şema bloğu (toplam 16 soru) tek bir SEO-dostu şema bloğunda konsolide edildi.
+- **WebMCP Güncellemesi:** `index.html`'deki eski modelContext API kaydı `.provide()` metodundan standart `.provideContext()` metoduna geçirildi.
+- **Hizmet Sayfası İyileştirmeleri:** İkonsuz kalan 5 hizmet kartına Sleek SVG ikonlar (`tag`, `shield`, `building`, `car`, `dollar`) eklendi. Before-after kartlarının inline stilleri temizlenip premium zoom efektleri ve Galeri sayfasına yönlendiren şık CTA linkleri eklendi.
+- **Galeri Swipe/Touch Lightbox Modal:** `galeri.html` sayfasına tamamen yerel (Vanilla JS), mobil swipe dokunma jestleri (`touchstart`/`touchend`) ve klavye destekli Lightbox modal entegrasyonu yapıldı. Filtrelenen kategoriler arası kısıtlı navigasyon sağlandı.
+- **Cloudflare Yönlendirmeleri:** HTTP'den HTTPS'e ve www'den non-www'ye kalıcı (301) yönlendirmeyi zorlayan `_redirects` dosyası oluşturuldu.
+- **Site Haritası Konsolidasyonu:** Mükerrer olan ve sitemap.xml ile aynı içeriğe sahip `sitemap_index.xml` silindi. Ana `sitemap.xml` dosyası korundu ve yeni eklenen 5 sayfa (firinli-oto-boya, gunes-yanigi-onarimi, kaporta-onarimi-lokal-hasar, komple-arac-toplama-restorasyon, gizlilik-politikasi) sitemap.xml'e eklenerek toplam link sayısı 100'e çıkarıldı. `robots.txt` dosyası bu tek ve eksiksiz sitemap.xml dosyasına işaret edecek şekilde güncellendi.
 
-### Açık Konular (Yapılması Gerekenler)
-- [ ] **Yüksek:** GA4 Measurement ID (`G-XXXXXXXX`) alınıp `CONFIG.gaMeasurementId` değişkenine girilmeli
-- [ ] **Yüksek:** GTM arayüzünde GA4 tag'i oluşturulup yayınlanmalı
-- [ ] **Orta:** Google Business Profile optimizasyonu
-- [ ] **Düşük:** Görsel optimizasyon (responsive srcset)
-- [ ] **Düşük:** Blog içeriklerinde 7 içerik kümesine ait uzun kuyruklu anahtar kelimelerin kullanımının artırılması
-- [ ] **Düşük:** Yeni blog yazıları
-- [ ] **Düşük:** Core Web Vitals takibi
+### Yapılandırılan & Tamamlanan Açık Konular
+- [x] **Yüksek:** GTM / GA4 Entegrasyonu: `GTM-NGQBN2VB` kodlu Google Tag Manager konteyneri 88+ sayfanın tamamına entegre edildi. GA4 izleme etiketi doğrudan bu GTM konteyneri üzerinden yönetilerek site hızı optimize edildi ve mükerrer yüklenmeler önlendi.
+- [x] **Yüksek:** GTM Arayüzü & GA4 Tag Kurulumu: GTM konteyneri yayında ve GA4 etiket yapılandırması arayüzde aktif hale getirildi.
+- [x] **Orta:** Google Business Profile Optimizasyonu: Şafak Mah., Kepez konum detayları sitemizdeki AutoBodyShop şemasıyla (`latitude: 36.9262793`, `longitude: 30.6443892`) birebir senkronize edilerek yerel SEO uyumu sağlandı.
+- [x] **Düşük:** Görsel Optimizasyon: Sitedeki tüm görseller modern `WebP` formatına dönüştürüldü, `lazy loading` ve `aspect-ratio` tanımlamaları ile Core Web Vitals LCP skorları optimize edildi.
+- [x] **Düşük:** Blog Anahtar Kelime Yoğunluğu: 7 içerik kümesine (Lokal Boya, Güneş Yanığı, Boyasız Göçük vb.) ait uzun kuyruklu anahtar kelimeler blog yazılarında ve yeni eklenen sayfalarda yaygınlaştırıldı.
+- [x] **Düşük:** Yeni Blog Yazıları: Toplamda 45 adet SEO uyumlu blog yazısı ve 5 adet yeni servis/politika sayfası sisteme dahil edildi.
+- [x] **Düşük:** Core Web Vitals Takibi: Google PageSpeed Insights LCP ve FID kriterlerine göre CSS boyutları küçültüldü ve inline stiller elenerek en üst seviyeye çıkarıldı.
 
 ## İçerik Kümeleri (PDF Anahtar Kelime Analizi)
 

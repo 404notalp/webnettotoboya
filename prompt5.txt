@@ -1,0 +1,120 @@
+{
+  "instruction_set": {
+    "role": "Senior Full-Stack Developer, UI/UX Designer, and Advanced Technical SEO Expert",
+    "context": "Comprehensive UI/UX optimization, components refactoring, and strict Technical SEO/Google Search Console error resolution for the Next.js project 'nettotoboya.com'.",
+    "global_requirements": [
+      "Ensure absolute responsiveness with custom-tailored mobile optimization.",
+      "Achieve premium performance metrics while establishing flawless SEO indexing structures.",
+      "Resolve all outstanding context errors originally detailed within prompt.txt.",
+      "Strictly preserve existing layout hierarchies (flex/gap settings) unless modifications are explicitly required."
+    ]
+  },
+  "tasks": {
+    "ui_ux_and_content_improvements": {
+      "gallery_module": {
+        "issue": "Current implementation is overly simplified and lacks image expansion functionality on interaction.",
+        "actions": [
+          "Integrate a modern Lightbox/Modal component triggered upon clicking images.",
+          "Tailor the gallery responsive states specifically for touch interfaces, enabling smooth mobile swipe/gesture controls.",
+          "Inject rich, non-repetitive visual assets directly from the newly created photo directory.",
+          "Systematically remove duplicate image occurrences across the codebase, replacing them with distinct, high-quality media."
+        ]
+      },
+      "blog_section": {
+        "actions": [
+          "Refactor the core blog layouts to modern UI standards.",
+          "Utilize relevant assets from the new photo directory to populate and fix missing imagery within blog components and posts."
+        ]
+      },
+      "services_component": {
+        "missing_svg_targets": [
+          "Uygun araç boyama",
+          "Hasarlı araç kaporta",
+          "Parça boyama fiyatları",
+          "Kaza sonrası boya",
+          "Aktif sanayi oto boyama"
+        ],
+        "actions": [
+          "Inject the missing specialized SVG icons (matching the existing layout's bodywork/wrench icon style) into the listed service components for strict interface consistency.",
+          "Revamp the 'Sonuçları Görün' (See Results) blocks, upgrading their skeletal image layouts with high-fidelity asset blocks.",
+          "Embed dynamic CTA buttons or links directing users explicitly back to the main Gallery page."
+        ]
+      }
+    },
+    "component_styling": {
+      "armut_button": {
+        "type": "text_based_capsule",
+        "behavior": "Flexible capsule expanding naturally based on text length constraints.",
+        "css_specification": {
+          "display": "flex",
+          "align-items": "center",
+          "justify-content": "center",
+          "padding": "10px 16px",
+          "background-color": "rgba(120, 184, 43, 0.15)",
+          "border": "1px solid rgba(120, 184, 43, 0.3)",
+          "border-radius": "22px",
+          "font-size": "0.8rem",
+          "color": "#78B82B",
+          "font-weight": "600"
+        }
+      },
+      "instagram_button": {
+        "type": "circle_icon_button",
+        "behavior": "Fixed dimensions creating a perfect circle, housing a centered SVG asset.",
+        "css_specification": {
+          "display": "flex",
+          "align-items": "center",
+          "justify-content": "center",
+          "width": "44px",
+          "height": "44px",
+          "border-radius": "50%",
+          "background-color": "rgba(225, 48, 108, 0.15)",
+          "border": "1px solid rgba(225, 48, 108, 0.3)",
+          "svg_icon_dimensions": {
+            "width": "20px",
+            "height": "20px"
+          }
+        }
+      }
+    },
+    "technical_seo_and_analytics": [
+      {
+        "task_id": 1,
+        "component": "Google Tag Manager (GTM)",
+        "issue": "Incomplete or non-optimized GTM deployment.",
+        "actions": [
+          "Deploy GTM script structures sitewide across all page scopes.",
+          "Ensure script loading mechanics follow strict Next.js script optimization protocols (<Script> strategy='afterInteractive') within Head and Body structures to prevent performance bottlenecks."
+        ]
+      },
+      {
+        "task_id": 2,
+        "component": "Schema Markup",
+        "issue": "Duplicate field 'FAQPage' leading to structured data payload parsing failures in Google Search Console.",
+        "actions": [
+          "Identify and isolate files injecting separate FAQ JSON-LD metadata.",
+          "Merge the isolated blocks (combining the 6 questions from block A and the 10 questions from block B).",
+          "Consolidate all 16 'mainEntity' objects cleanly into a single valid script tag configured with '@type': 'FAQPage' schema.",
+          "Validate structural integrity to prevent syntax fragmentation or array duplication errors."
+        ]
+      },
+      {
+        "task_id": 3,
+        "component": "Routing and Canonical Tags",
+        "issue": "Google Search Console indexing alerts regarding 'Redirect error' and 'Alternate page with proper canonical tag'.",
+        "actions": [
+          "Configure middleware or next.config.js redirection logic to ensure rigid enforcement of HTTP to HTTPS and WWW to Non-WWW (or vice versa) traffic flows.",
+          "Bind absolute URLs dynamically to target page-level <link rel='canonical' href='...' /> nodes.",
+          "Audit the generation of public/sitemap.xml to verify trailing slashes, exact matching protocols, and absolute URLs reflect canonical addresses 1:1."
+        ]
+      }
+    ],
+    "pre_deployment_verification": {
+      "command": "npm run build || yarn build",
+      "requirement": "Execute local verification tasks to guarantee production compilations finalize cleanly, revealing zero breaking TypeScript typings, code lint failures, or layout shifted components."
+    }
+  },
+  "output_specification": {
+    "format": "Provide clean, fully-formed code blocks, configuration files, or updated component snippets ready for deployment. Omit supplementary conversational prose or meta-commentary."
+  }
+}

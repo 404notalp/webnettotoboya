@@ -1,0 +1,9 @@
+<IfModule mod_headers.c>
+  Header set Link "</.well-known/api-catalog>; rel=\"api-catalog\", </llms.txt>; rel=\"alternate\"; type=\"text/markdown\", </sitemap.xml>; rel=\"sitemap\""
+  Header set X-Robots-Tag "index, follow"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType text/markdown .txt .md
+  AddType application/linkset+json .json
+</IfModule>

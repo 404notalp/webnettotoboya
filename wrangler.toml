@@ -1,0 +1,3 @@
+name = "markdown-agent"
+main = "markdown-agent.js"
+compatibility_date = "2026-05-11"

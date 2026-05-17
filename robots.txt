@@ -1,0 +1,23 @@
+# robots.txt - nettotoboya.com
+# Son guncelleme: 2026-05-11
+
+# Tüm standart botlar ve AI tarayıcıları için genel kurallar
+User-agent: *
+Allow: /
+Allow: /.well-known/
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /ai-answers.md
+
+# Sistem klasörleri ve geliştirici scriptlerini engelleme
+Disallow: /_backup/
+Disallow: /*.py$
+Disallow: /*_log.txt$
+Disallow: /result.txt
+
+# Altyapı ve API dosyalarını engelleme (Tarama bütçesini korumak için)
+Disallow: /_next/
+Disallow: /api/
+
+# Site haritaları (Sadece sitemap_index.xml yeterlidir, diğerini kapsar)
+Sitemap: https://nettotoboya.com/sitemap_index.xml

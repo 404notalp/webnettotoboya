@@ -1,0 +1,36 @@
+{
+  "$schema": "https://isitagentready.com/.well-known/agent-skills/schema.json",
+  "skills": [
+    {
+      "name": "NeTT Auto Body Shop",
+      "type": "local-business",
+      "description": "Antalya Akdeniz Sanayi Sitesi'nde profesyonel oto boya, kaporta onarım ve restorasyon hizmetleri. Fırınlı boya sistemi, dijital renk eşleştirme ve garantili işçilik.",
+      "url": "https://nettotoboya.com/",
+      "keywords": ["oto boya antalya", "antalya oto boyacı", "antalya en uygun oto boyacı", "antalya en iyi oto boyacı", "araç toplama antalya", "kaporta onarım antalya", "fırınlı boya", "lokal boya", "restorasyon antalya"]
+    },
+    {
+      "name": "Auto Body Services",
+      "type": "service",
+      "description": "Oto boya, kaporta onarım, lokal boya, güneş yanığı tamiri, araç toplama, ağır hasar onarımı, klasik araç restorasyonu, tampon ve parça boyama hizmetleri",
+      "url": "https://nettotoboya.com/hizmetler.html"
+    },
+    {
+      "name": "Service Locations",
+      "type": "service-area",
+      "description": "Antalya Lara, Konyaaltı, Kepez, Muratpaşa, Aksu ve Döşemealtı bölgelerine hizmet. Akdeniz Sanayi Sitesi'nde merkez atölye.",
+      "url": "https://nettotoboya.com/bolgeler.html"
+    },
+    {
+      "name": "Contact Information",
+      "type": "contact",
+      "description": "WhatsApp: +90 538 840 42 64 | Adres: Şafak, 5040.Sokak Sanayi 28/A Blok No 16, 07220 Kepez/Antalya | Çalışma: Pzt-Cmt 08:30-19:00",
+      "url": "https://nettotoboya.com/iletisim.html"
+    }
+  ],
+  "contact": {
+    "name": "NeTT Oto Boya & Kaporta",
+    "telephone": "+905388404264",
+    "email": "info@nettotoboya.com",
+    "url": "https://nettotoboya.com"
+  }
+}

@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boya &amp; Kaporta Galerimiz | Komple AraÃ§ Toplama ReferanslarÄ±</title>
+  <meta name="description"
+    content="FÄ±rÄ±nlÄ± komple boya, aÄŸÄ±r hasar onarÄ±mÄ± ve pert araÃ§ restorasyonu projelerimizin Ã¶ncesi-sonrasÄ± fotoÄŸraflarÄ±. Kusursuz iÅŸÃ§iliÄŸimizi canlÄ± inceleyin.">
+  <meta name="keywords"
+    content="komple araÃ§ toplama, araÃ§ restorasyonu, hasarlÄ± araÃ§ onarÄ±mÄ±, pert araÃ§ toplama, derin Ã§izik giderme, gÃ¼neÅŸ yanÄ±ÄŸÄ± boyama, Ã¶ncesi sonrasÄ± oto boya">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nettotoboya.com/galeri.html">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .filter-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .filter-btn {
+      padding: 10px 24px;
+      border-radius: 100px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent-yellow);
+      color: #000;
+      border-color: var(--accent-yellow);
+    }
+
+    .gallery-item {
+      display: none;
+    }
+
+    .gallery-item.show {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+  
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Google Fonts async -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
+  <style>@font-face{font-family:'Plus Jakarta Sans';font-display:swap}@font-face{font-family:'Outfit';font-display:swap}</style>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@700;800;900&display=swap"></noscript>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NGQBN2VB');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGQBN2VB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <img src="foto/3.webp" class="page-hero-bg" alt="NeTT Proje Galerisi" loading="eager">
+    <div class="page-hero-overlay"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <p
+          style="font-size:0.75rem; font-weight:800; letter-spacing:4px; color:rgba(255,255,255,0.5); margin-bottom:10px">
+          PORTFOLYO</p>
+        <h1 class="fade-in">PROJE <span class="text-yellow">GALERISI</span></h1>
+        <p class="fade-in">SÃ¶zler deÄŸil, sonuÃ§lar konuÅŸur. AtÃ¶lyemizde tamamlanan bazÄ± seÃ§kin onarÄ±m ve boyama
+          projelerimiz.</p>
+      </div>
+    </div>
+  </section>
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li>Galeri</li>
+      </ol>
+    </div>
+  </nav>
+  <main>
+    <section class="section-padding">
+      <div class="container">
+
+        <div class="filter-btn-group fade-in">
+          <button class="filter-btn active" data-filter="all">TÃ¼mÃ¼</button>
+          <button class="filter-btn" data-filter="before-after">Ã–ncesi & SonrasÄ±</button>
+          <button class="filter-btn" data-filter="restoration">Klasik AraÃ§</button>
+          <button class="filter-btn" data-filter="special">Ã–zel Projeler</button>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+
+          <!-- Before / After Set 1 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/beforeafter/before (2).webp" alt="Kaporta Ã–ncesi" loading="lazy"><span
+                  class="ba-label">Ã–ncesi</span></div>
+              <div class="ba-half"><img src="foto/beforeafter/after (2).webp" alt="Kaporta SonrasÄ±" loading="lazy"><span class="ba-label"
+                  style="background:var(--accent-yellow); color:#000">SonrasÄ±</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>AÄŸÄ±r Kaporta OnarÄ±mÄ±</h4>
+              <p>DeÄŸiÅŸim olmadan orijinal parÃ§a kurtarma ve FÄ±rÄ±nlÄ± boya.</p>
+            </div>
+          </div>
+          <!-- Before / After Set 2 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/mus/1.webp" alt="Ã‡izik Ã–ncesi" loading="lazy"><span
+                  class="ba-label">Ã–ncesi</span></div>
+              <div class="ba-half"><img src="foto/mus/2.webp" alt="Ã‡izik SonrasÄ±" loading="lazy"><span class="ba-label"
+                  style="background:var(--accent-yellow); color:#000">SonrasÄ±</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>Lokal Ã‡izik OnarÄ±mÄ±</h4>
+              <p>Renk geÃ§iÅŸsiz lokal yama boyasÄ± uygulamasÄ±.</p>
+            </div>
+          </div>
+          <!-- Before / After Set 3 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/beforeafter/before (1).webp" alt="GÃ¼neÅŸ YanÄ±ÄŸÄ± Ã–ncesi"
+                  loading="lazy"><span class="ba-label">Ã–ncesi</span></div>
+              <div class="ba-half"><img src="foto/beforeafter/after (1).webp" alt="GÃ¼neÅŸ YanÄ±ÄŸÄ± SonrasÄ±" loading="lazy"><span
+                  class="ba-label" style="background:var(--accent-yellow); color:#000">SonrasÄ±</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>GÃ¼neÅŸ YanÄ±ÄŸÄ± Tamiri</h4>
+              <p>UV filtreli Ã¶zel vernik yenileme iÅŸlemi.</p>
+            </div>
+          </div>
+          <!-- Before / After Set 4 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/beforeafter/before (3).webp" alt="Darbe Ã–ncesi" loading="lazy"><span
+                  class="ba-label">Ã–ncesi</span></div>
+              <div class="ba-half"><img src="foto/beforeafter/after (3).webp" alt="Darbe SonrasÄ±" loading="lazy"><span
+                  class="ba-label" style="background:var(--accent-yellow); color:#000">SonrasÄ±</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>Ã‡amurluk GÃ¶Ã§Ã¼k DÃ¼zeltme</h4>
+              <p>Åžase podyesi korunarak yapÄ±lan kaporta ve boya iÅŸlemi.</p>
+            </div>
+          </div>
+          <!-- Restoration Project 1 -->
+          <div class="before-after-card gallery-item show restoration">
+            <div class="ba-images">
+              <div class="ba-half"><img src="foto/1957 chevrolet belair/23.webp" alt="Restorasyon AÅŸamasÄ±"
+                  loading="lazy"><span class="ba-label">AÅŸamasÄ±</span></div>
+              <div class="ba-half"><img src="foto/1957 chevrolet belair/11.webp" alt="Restorasyon Sonucu"
+                  loading="lazy"><span class="ba-label"
+                  style="background:var(--accent-yellow); color:#000">Sonucu</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>1957 Chevrolet Bel Air</h4>
+              <p>Komple kumlama, epoksi astar ve FÄ±rÄ±nlÄ± klasik restorasyon.</p>
+            </div>
+          </div>
+          <!-- Special / Minibus -->
+          <div class="before-after-card gallery-item show special">
+            <div style="aspect-ratio:16/9; overflow:hidden">
+              <img loading="lazy" src="foto/minibs_onarm.webp" alt="MinibÃ¼s Projesi" style="width:100%; height:100%; object-fit:cover">
+            </div>
+            <div class="ba-info">
+              <h4>Ticari AraÃ§ Toplama</h4>
+              <p>AÄŸÄ±r hasarlÄ± VIP minibÃ¼sÃ¼n kaporta ÅŸase ve komple boya iÅŸlemi.</p>
+            </div>
+          </div>
+          <!-- Special / BMW -->
+          <div class="before-after-card gallery-item show special">
+            <div style="aspect-ratio:16/9; overflow:hidden">
+              <img loading="lazy" src="foto/nettotoboya_mail.webp" alt="BMW Boyama" style="width:100%; height:100%; object-fit:cover">
+            </div>
+            <div class="ba-info">
+              <h4>LÃ¼ks Segment Boya</h4>
+              <p>BMW kaput ve tavanÄ±nda orijinal renk kodlu %100 uyumlu boyama.</p>
+            </div>
+          </div>
+          <!-- Special / Tampon -->
+          <div class="before-after-card gallery-item show special">
+            <div style="aspect-ratio:16/9; overflow:hidden">
+              <img loading="lazy" src="foto/4.webp" alt="Tampon OnarÄ±mÄ±" style="width:100%; height:100%; object-fit:cover">
+            </div>
+            <div class="ba-info">
+              <h4>Tampon ve Plastik OnarÄ±mÄ±</h4>
+              <p>Esnek astar uygulanarak yapÄ±lan Ã¶mÃ¼rlÃ¼k tampon boyasÄ±.</p>
+            </div>
+          </div>
+          <!-- Yeni Galeri 1 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img loading="lazy" src="foto/yeni/1.webp" alt="Boya Ã–ncesi"><span class="ba-label">Ã–ncesi</span></div>
+              <div class="ba-half"><img loading="lazy" src="foto/a.webp" alt="Boya SonrasÄ±"><span class="ba-label" style="background:var(--accent-yellow); color:#000">SonrasÄ±</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>Panel Boya Yenileme</h4>
+              <p>Profesyonel renk eÅŸleÅŸtirme ve fÄ±rÄ±nlÄ± boya uygulamasÄ±.</p>
+            </div>
+          </div>
+          <!-- Yeni Galeri 2 -->
+          <div class="before-after-card gallery-item show before-after">
+            <div class="ba-images">
+              <div class="ba-half"><img loading="lazy" src="foto/yeni/7.webp" alt="Kaporta Ã–ncesi"><span class="ba-label">Ã–ncesi</span></div>
+              <div class="ba-half"><img loading="lazy" src="foto/yeni/8.webp" alt="Kaporta SonrasÄ±"><span class="ba-label" style="background:var(--accent-yellow); color:#000">SonrasÄ±</span></div>
+            </div>
+            <div class="ba-info">
+              <h4>Kaporta HizasÄ± DÃ¼zeltme</h4>
+              <p>Milimetrik panel ayarÄ± ve kusursuz boya geÃ§iÅŸi.</p>
+            </div>
+          </div>
+          <!-- Yeni Galeri 3 -->
+          <div class="before-after-card gallery-item show restoration">
+            <div style="aspect-ratio:16/9; overflow:hidden">
+              <img loading="lazy" src="foto/yeni/5.webp" alt="Klasik AraÃ§ Restorasyon" style="width:100%; height:100%; object-fit:cover">
+            </div>
+            <div class="ba-info">
+              <h4>Klasik AraÃ§ Tam Restorasyon</h4>
+              <p>Epoksi astar, orijinal renk kodu ve fÄ±rÄ±nlÄ± boya ile komple restorasyon.</p>
+            </div>
+          </div>
+          <!-- Yeni Galeri 4 -->
+          <div class="before-after-card gallery-item show special">
+            <div style="aspect-ratio:16/9; overflow:hidden">
+              <img loading="lazy" src="foto/yeni/6.webp" alt="Ã–zel Proje" style="width:100%; height:100%; object-fit:cover">
+            </div>
+            <div class="ba-info">
+              <h4>Ã–zel Proje Boya</h4>
+              <p>Ä°steÄŸe baÄŸlÄ± renk kodlu Ã¶zel boya uygulamasÄ± ve seramik kaplama.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section class="section-padding" style="background:var(--bg-secondary)">
+      <div class="container">
+        <div class="cta-block fade-in">
+          <h2>SIRADAKÄ° PROJE <span class="text-yellow">ARACINIZ OLSUN</span></h2>
+          <p>MÃ¼kemmeliyetÃ§i iÅŸÃ§iliÄŸimizle tanÄ±ÅŸmak ve aracÄ±nÄ±z iÃ§in fiyat almak iÃ§in fotoÄŸraf gÃ¶nderin.</p>
+          <div class="btn-group">
+            <a href="https://wa.me/905388404264" class="btn btn-primary">WhatsApp'tan Teklif Al</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-label="Galeri GÃ¶rseli">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Kapat">âœ•</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Ã–nceki">â€¹</button>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Sonraki">â€º</button>
+    <img id="lightbox-img" src alt="Galeri GÃ¶rseli" loading="lazy">
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
+  <script src="components.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initPage({ activePage: 'galeri.html' });
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+          galleryItems.forEach(item => {
+            if (filter === 'all' || item.classList.contains(filter)) {
+              item.classList.add('show');
+            } else {
+              item.classList.remove('show');
+            }
+          });
+        });
+      });
+
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCounter = document.getElementById('lightbox-counter');
+      let lbImages = [];
+      let lbIndex = 0;
+
+      function getLightboxImages() {
+        lbImages = [];
+        document.querySelectorAll('.gallery-item.show img').forEach(img => {
+          const src = img.getAttribute('src') || img.src;
+          if (src && !src.includes('icon') && lbImages.indexOf(src) === -1) {
+            lbImages.push(src);
+          }
+        });
+      }
+
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          getLightboxImages();
+          const src = img.getAttribute('src') || img.src;
+          lbIndex = lbImages.indexOf(src);
+          if (lbIndex === -1) { lbImages.unshift(src); lbIndex = 0; }
+          openLightbox();
+        });
+        img.style.cursor = 'pointer';
+      });
+
+      function openLightbox() {
+        if (lbImages.length === 0) return;
+        lightboxImg.src = lbImages[lbIndex];
+        lightboxImg.alt = document.querySelector('.gallery-item.show img')?.alt || 'Galeri GÃ¶rseli';
+        lightboxCounter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function prevImage() {
+        lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length;
+        lightboxImg.src = lbImages[lbIndex];
+        lightboxCounter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
+      }
+
+      function nextImage() {
+        lbIndex = (lbIndex + 1) % lbImages.length;
+        lightboxImg.src = lbImages[lbIndex];
+        lightboxCounter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
+      }
+
+      document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+      document.getElementById('lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+      document.getElementById('lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
+      lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'ArrowRight') nextImage();
+      });
+
+      // Touch swipe
+      let touchStartX = 0;
+      lightbox.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+      lightbox.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) nextImage(); else prevImage();
+        }
+      }, { passive: true });
+    });
+  </script>
+</body>
+
+</html>

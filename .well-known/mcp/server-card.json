@@ -1,0 +1,56 @@
+{
+  "serverInfo": {
+    "name": "NeTT Oto Boya",
+    "version": "1.0.0",
+    "description": "Antalya Akdeniz Sanayi Sitesi'nde profesyonel oto boya, kaporta, araç toplama ve ağır hasar onarım hizmetleri"
+  },
+  "transport": {
+    "type": "http",
+    "endpoint": "https://nettotoboya.com/"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "contact",
+        "description": "İletişim bilgilerini al - telefon, adres, çalışma saatleri"
+      },
+      {
+        "name": "services",
+        "description": "Mevcut hizmetleri listele - oto boya, kaporta, lokal boya, araç toplama, ağır hasar onarımı, restorasyon"
+      },
+      {
+        "name": "whatsapp",
+        "description": "WhatsApp üzerinden iletişime geç"
+      }
+    ],
+    "resources": [
+      {
+        "name": "homepage",
+        "uri": "https://nettotoboya.com/"
+      },
+      {
+        "name": "services",
+        "uri": "https://nettotoboya.com/hizmetler.html"
+      },
+      {
+        "name": "contact",
+        "uri": "https://nettotoboya.com/iletisim.html"
+      },
+      {
+        "name": "gallery",
+        "uri": "https://nettotoboya.com/galeri.html"
+      }
+    ]
+  },
+  "provider": {
+    "name": "NeTT Oto Boya & Kaporta",
+    "url": "https://nettotoboya.com/",
+    "location": {
+      "address": "Şafak Mahallesi, 5040. Sokak Sanayi 28/A Blok No 16, 07220 Kepez/Antalya",
+      "coordinates": {
+        "latitude": 36.9262793,
+        "longitude": 30.6443892
+      }
+    }
+  }
+}

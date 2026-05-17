@@ -1,0 +1,55 @@
+# prompt_revision.txt — NeTT Oto Boya Revizyon Planı
+# Tarih: 17 Mayıs 2026
+# Kaynak: PROJE_ANALIZI.md Kapsamlı Denetim
+
+## AŞAMA 1 — YÜKSEK ÖNCELİK (Hemen Yapılacak)
+
+### 1.1 Footer Gizlilik Linki Düzeltme
+- **Durum:** `components.js` içinde gizlilik linki `href="#"` olarak duruyor
+- **İşlem:** `components.js:186` satırındaki gizlilik linkini gerçek `gizlilik-politikasi.html` sayfasına yönlendir
+- **Kapsam:** Tüm sayfalarda footer otomatik güncellenir (JS render)
+
+### 1.2 Blog Meta Keywords Ekleme
+- **Durum:** 45 blog yazısında meta keywords tag'i yok
+- **İşlem:** Script ile her blog post'una title'dan türetilmiş keywords ekle
+- **Yöntem:** Her post'un title ve description'ına göre otomatik keyword seti oluştur
+
+### 1.3 OG Tags JS Injection
+- **Durum:** 59 sayfada OG tags eksik (blog + hizmetler + özel sayfalar)
+- **İşlem:** `components.js` içindeki `initPage()`'e OG tag injector ekle
+- **Not:** Crawler'lar JS çalıştırmaz, ancak sosyal medya platformları için yeterli
+- **Gelecek:** Tam kapsam için inline OG tags gerekecek
+
+### 1.4 Google Görünürlük İyileştirmesi
+- **Durum:** Hiçbir sayfada Google Analytics/GA4 kodu yok
+- **İşlem:** GA4 kod bloğunu GTM container'a ekleme planı notu
+- **Not:** Gerçek GTM ID'si girildiğinde çalışacak — şu an placeholder
+
+## AŞAMA 2 — ORTA ÖNCELİK (Planlanacak)
+
+### 2.1 Görsel Optimizasyon
+- WebP sıkıştırma (80% kalite)
+- Responsive srcset ekleme
+- Lazy loading kontrolü
+
+### 2.2 Blog İçerik Zenginleştirme
+- 7 içerik kümesine ait uzun kuyruklu anahtar kelimeler
+- Her küme için en az 1 derinlemesine makale
+
+## AŞAMA 3 — DÜŞÜK ÖNCELİK (İzleme)
+
+### 3.1 Performans Metrikleri
+- LCP, CLS, FID takibi
+- Core Web Vitals raporu
+
+### 3.2 Google Business Profile
+- Profil optimizasyonu
+- Müşteri yorumları yönetimi
+
+---
+
+## UYGULAMA SIRASI
+1. Footer gizlilik linki → components.js (1 dk)
+2. Blog meta keywords → PowerShell script (30 sn)
+3. OG tags injection → components.js (2 dk)
+4. PROJE_ANALIZI.md güncelleme

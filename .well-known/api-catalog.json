@@ -1,0 +1,68 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://nettotoboya.com/",
+      "links": [
+        {
+          "rel": "service-doc",
+          "href": "https://nettotoboya.com/",
+          "hreflang": "tr",
+          "title": "NeTT Oto Boya Ana Sayfa"
+        },
+        {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "https://nettotoboya.com/"
+        },
+        {
+          "rel": "sitemap",
+          "href": "https://nettotoboya.com/sitemap.xml"
+        },
+        {
+          "rel": "alternate",
+          "type": "text/markdown",
+          "href": "https://nettotoboya.com/llms.txt",
+          "title": "AI sistemleri icin kisa NeTT Oto Boya ozeti"
+        },
+        {
+          "rel": "alternate",
+          "type": "text/markdown",
+          "href": "https://nettotoboya.com/ai-answers.md",
+          "title": "Antalya oto boya ve arac toplama sorulari icin cevaplar"
+        }
+      ]
+    },
+    {
+      "anchor": "https://nettotoboya.com/hizmetler.html",
+      "links": [
+        {
+          "rel": "service-doc",
+          "href": "https://nettotoboya.com/hizmetler.html",
+          "hreflang": "tr",
+          "title": "Hizmetlerimiz"
+        }
+      ]
+    },
+    {
+      "anchor": "https://nettotoboya.com/iletisim.html",
+      "links": [
+        {
+          "rel": "service-doc",
+          "href": "https://nettotoboya.com/iletisim.html",
+          "hreflang": "tr",
+          "title": "İletişim Bilgileri"
+        }
+      ]
+    },
+    {
+      "anchor": "https://nettotoboya.com/.well-known/agent-skills/index.json",
+      "links": [
+        {
+          "rel": "agent-skills",
+          "href": "https://nettotoboya.com/.well-known/agent-skills/index.json",
+          "title": "AI Agent Skills Index"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Contact: mailto:info@nettotoboya.com
+Expires: 2027-05-04T23:59:00.000Z
+Preferred-Languages: tr, en
+Canonical: https://nettotoboya.com/.well-known/security.txt

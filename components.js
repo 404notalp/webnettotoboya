@@ -1,19 +1,19 @@
 ﻿/* ============================================
-   NETTOTOBOYA.COM â€” NeTT Master Components v2.1
+   NETTOTOBOYA.COM Ã¢â‚¬â€ NeTT Master Components v2.1
    ============================================ */
 const CONFIG = {
   phone: '+90 538 840 42 64',
   phoneTel: 'tel:+905388404264',
   whatsapp: 'https://wa.me/905388404264',
   whatsappText: '?text=Merhaba%2C%20arac%C4%B1m%20i%C3%A7in%20fiyat%20bilgisi%20almak%20istiyorum.',
-  address: 'Şafak, 5040.Sokak Sanayi 28/A Blok No 16, 07220 Kepez/Antalya',
+  address: 'Åžafak, 5040.Sokak Sanayi 28/A Blok No 16, 07220 Kepez/Antalya',
   mapsUrl: 'https://share.google/4NpUNOn43V3WKK2TE',
-  hours: '08:30 – 19:00',
+  hours: '08:30 â€“ 19:00',
   businessName: 'NeTT',
   logoPath: 'logo.webp',
   year: new Date().getFullYear(),
   gtmId: 'GTM-NGQBN2VB',
-  gaMeasurementId: '' // ← GA4 Measurement ID (G-XXXXXXXX) buraya girilecek
+  gaMeasurementId: '' // â† GA4 Measurement ID (G-XXXXXXXX) buraya girilecek
 };
 const ICONS = {
   google: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-1 .67-2.28 1.07-3.71 1.07-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.11c-.22-.67-.35-1.38-.35-2.11s.13-1.44.35-2.11V7.05H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.95l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84c.87-2.6 3.3-4.51 6.16-4.51z" fill="#EA4335"/></svg>`,
@@ -46,23 +46,23 @@ function renderHeader(activePage) {
       href: 'hizmetler.html',
       dropdown: [
         { label: 'Oto Boya', href: 'antalya-oto-boya.html' },
-        { label: 'Kaporta OnarÄ±m', href: 'antalya-kaporta-onarim.html' },
-        { label: 'Tampon & ParÃ§a Boyama', href: 'antalya-tampon-parca-boyama.html' },
+        { label: 'Kaporta OnarÃ„Â±m', href: 'antalya-kaporta-onarim.html' },
+        { label: 'Tampon & ParÃƒÂ§a Boyama', href: 'antalya-tampon-parca-boyama.html' },
         { label: 'Lokal Boya', href: 'antalya-lokal-boya.html' },
-        { label: 'Ã‡izik OnarÄ±m', href: 'antalya-cizik-onarim.html' },
+        { label: 'Ãƒâ€¡izik OnarÃ„Â±m', href: 'antalya-cizik-onarim.html' },
         { label: 'Macun & Astar', href: 'antalya-macun-astar-islemleri.html' },
         { label: 'Restorasyon', href: 'antalya-klasik-araba-restorasyon.html' },
-        { label: 'AraÃ§ Toplama', href: 'antalya-arac-toplama.html' },
-        { label: 'GÃ¼neÅŸ YanÄ±ÄŸÄ±', href: 'antalya-gunes-yanigi-tamiri.html' },
-        { label: 'Uygun AraÃ§ Boyama', href: 'hizmetler/antalya-uygun-arac-boyama.html' },
-        { label: 'HasarlÄ± Kaporta', href: 'hizmetler/antalya-hasarli-arac-kaporta-onarimi.html' }
+        { label: 'AraÃƒÂ§ Toplama', href: 'antalya-arac-toplama.html' },
+        { label: 'GÃƒÂ¼neÃ…Å¸ YanÃ„Â±Ã„Å¸Ã„Â±', href: 'antalya-gunes-yanigi-tamiri.html' },
+        { label: 'Uygun AraÃƒÂ§ Boyama', href: 'hizmetler/antalya-uygun-arac-boyama.html' },
+        { label: 'HasarlÃ„Â± Kaporta', href: 'hizmetler/antalya-hasarli-arac-kaporta-onarimi.html' }
       ]
     },
-    { label: 'BÃ¶lgeler', href: 'bolgeler.html' },
+    { label: 'BÃƒÂ¶lgeler', href: 'bolgeler.html' },
     { label: 'Galeri', href: 'galeri.html' },
-    { label: 'HakkÄ±mÄ±zda', href: 'hakkimizda.html' },
+    { label: 'HakkÃ„Â±mÃ„Â±zda', href: 'hakkimizda.html' },
     { label: 'Blog', href: 'blog/index.html' },
-    { label: 'Ä°letiÅŸim', href: 'iletisim.html' }
+    { label: 'Ã„Â°letiÃ…Å¸im', href: 'iletisim.html' }
   ];
 
   const header = document.createElement('header');
@@ -72,7 +72,7 @@ function renderHeader(activePage) {
     <div class="container" style="height:100%">
       <div class="header-inner">
         <a href="${basePath}index.html" class="header-logo"><img src="${basePath}${CONFIG.logoPath}" alt="NeTT Oto Boya Antalya" width="130" height="65" fetchpriority="high" decoding="sync"></a>
-        <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Ana MenÃ¼">
+        <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Ana MenÃƒÂ¼">
           ${nav.map((n, i) => {
     if (n.dropdown) {
       return `<div class="nav-item-dropdown" id="dropdown-${i}">
@@ -88,7 +88,7 @@ function renderHeader(activePage) {
           <a href="https://www.instagram.com/nettotoboya" target="_blank" rel="noopener" title="Instagram" class="social-btn social-btn-circle social-btn-instagram">${ICONS.instagram}</a>
           <a href="https://armut.com/hizmetveren/tolga-tovac-antalya-kepez-oto-boya_70337728" target="_blank" rel="noopener" title="Armut" style="display:inline-flex; align-items:center; padding:0 14px; height:44px; border-radius:22px; background:rgba(120,184,43,0.15); border:1px solid rgba(120,184,43,0.3); font-size:0.75rem; color:#78B82B; font-weight:700; text-decoration:none; transition:0.3s" onmouseover="this.style.background='rgba(120,184,43,0.25)'" onmouseout="this.style.background='rgba(120,184,43,0.15)'">Armut.com</a>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="MenÃ¼yÃ¼ AÃ§" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="MenÃƒÂ¼yÃƒÂ¼ AÃƒÂ§" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>`;
   document.body.prepend(header);
@@ -142,7 +142,7 @@ function renderFooter() {
           <a href="${basePath}index.html" style="display:inline-block; margin-bottom:20px">
             <img src="${basePath}${CONFIG.logoPath}" alt="NeTT" style="height:55px; object-fit:contain">
           </a>
-          <p style="color:var(--text-secondary); max-width:280px; font-size:0.9rem; line-height:1.8">Antalya'nÄ±n zirve otomobil atÃ¶lyesi. Kusursuz iÅŸÃ§ilik, FÄ±rÄ±nlÄ± boya ve kaporta sanatÄ±.</p>
+          <p style="color:var(--text-secondary); max-width:280px; font-size:0.9rem; line-height:1.8">Antalya'nÃ„Â±n zirve otomobil atÃƒÂ¶lyesi. Kusursuz iÃ…Å¸ÃƒÂ§ilik, FÃ„Â±rÃ„Â±nlÃ„Â± boya ve kaporta sanatÃ„Â±.</p>
           <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap">
             <a href="https://share.google/4NpUNOn43V3WKK2TE" target="_blank" rel="noopener" title="Google Harita" class="social-btn social-btn-circle social-btn-location">${ICONS.map}</a>
             <a href="${CONFIG.whatsapp}" target="_blank" rel="noopener" title="WhatsApp" class="social-btn social-btn-circle social-btn-whatsapp">${ICONS.whatsapp}</a>
@@ -153,36 +153,36 @@ function renderFooter() {
         <div class="footer-col">
           <h3>Kurumsal</h3>
           <ul class="footer-links">
-            <li><a href="${basePath}hakkimizda.html">HakkÄ±mÄ±zda</a></li>
-            <li><a href="${basePath}iletisim.html">Ä°letiÅŸim & Konum</a></li>
+            <li><a href="${basePath}hakkimizda.html">HakkÃ„Â±mÃ„Â±zda</a></li>
+            <li><a href="${basePath}iletisim.html">Ã„Â°letiÃ…Å¸im & Konum</a></li>
             <li><a href="${basePath}galeri.html">Proje Galerisi</a></li>
-            <li><a href="${basePath}hizmetler.html">TÃ¼m Hizmetler</a></li>
-            <li><a href="${basePath}bolgeler.html">Hizmet BÃ¶lgeleri</a></li>
+            <li><a href="${basePath}hizmetler.html">TÃƒÂ¼m Hizmetler</a></li>
+            <li><a href="${basePath}bolgeler.html">Hizmet BÃƒÂ¶lgeleri</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h3>Hizmetler</h3>
           <ul class="footer-links">
             <li><a href="${basePath}antalya-oto-boya.html">Oto Boya</a></li>
-            <li><a href="${basePath}antalya-kaporta-onarim.html">Kaporta OnarÄ±m</a></li>
+            <li><a href="${basePath}antalya-kaporta-onarim.html">Kaporta OnarÃ„Â±m</a></li>
             <li><a href="${basePath}antalya-lokal-boya.html">Lokal Boya</a></li>
             <li><a href="${basePath}antalya-tampon-parca-boyama.html">Tampon Boyama</a></li>
-            <li><a href="${basePath}antalya-gunes-yanigi-tamiri.html">GÃ¼neÅŸ YanÄ±ÄŸÄ± Tamiri</a></li>
+            <li><a href="${basePath}antalya-gunes-yanigi-tamiri.html">GÃƒÂ¼neÃ…Å¸ YanÃ„Â±Ã„Å¸Ã„Â± Tamiri</a></li>
             <li><a href="${basePath}antalya-klasik-araba-restorasyon.html">Restorasyon</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Ä°letiÅŸim</h3>
+          <h3>Ã„Â°letiÃ…Å¸im</h3>
           <ul class="footer-links">
             <li>Adres: ${CONFIG.address}</li>
             <li>Telefon: <a href="${CONFIG.phoneTel}" style="color:var(--accent-yellow); font-weight:700">${CONFIG.phone}</a></li>
-            <li>Saatler: ${CONFIG.hours} (Pztâ€“Cmt)</li>
+            <li>Saatler: ${CONFIG.hours} (PztÃ¢â‚¬â€œCmt)</li>
             <li><a href="${CONFIG.whatsapp}" target="_blank" style="color:#128C7E">WhatsApp'tan Teklif Al</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bar">
-        <p>Â© ${CONFIG.year} NeTT Antalya Oto Boya â€” TÃ¼m HaklarÄ± SaklÄ±dÄ±r.</p>
+        <p>Ã‚Â© ${CONFIG.year} NeTT Antalya Oto Boya Ã¢â‚¬â€ TÃƒÂ¼m HaklarÃ„Â± SaklÃ„Â±dÃ„Â±r.</p>
         <div style="display:flex; gap:20px">
           <a href="${basePath}gizlilik-politikasi.html" style="font-size:0.75rem; color:var(--text-muted)">KVKK</a>
           <a href="${basePath}gizlilik-politikasi.html" style="font-size:0.75rem; color:var(--text-muted)">Gizlilik</a>
@@ -193,9 +193,9 @@ function renderFooter() {
 }
 function renderTestimonials() {
   const reviews = [
-    { name: "Ahmet Y.", location: "Lara", text: "BMW aracÄ±mÄ±n tamponundaki Ã§iziÄŸi lokal boya ile 1 saatte hallettiler. Ton farkÄ± kesinlikle yok. Akdeniz Sanayi'nin en iyisi.", stars: 5 },
-    { name: "Selin K.", location: "KonyaaltÄ±", text: "GÃ¼neÅŸ yanÄ±ÄŸÄ± iÃ§in gelmiÅŸtim, komple boyatmak yerine lokal Ã§Ã¶zÃ¼mlerle orijinalliÄŸi korudular. Ã‡ok dÃ¼rÃ¼st ve kaliteli bir ekip.", stars: 5 },
-    { name: "Mehmet O.", location: "MuratpaÅŸa", text: "Restorasyon projem iÃ§in aylarca yer aradÄ±m, sonunda NeTT ile anlaÅŸtÄ±m. Sonucu inanÄ±lmaz. Her kuruÅŸu helal olsun.", stars: 5 }
+    { name: "Ahmet Y.", location: "Lara", text: "BMW aracÃ„Â±mÃ„Â±n tamponundaki ÃƒÂ§iziÃ„Å¸i lokal boya ile 1 saatte hallettiler. Ton farkÃ„Â± kesinlikle yok. Akdeniz Sanayi'nin en iyisi.", stars: 5 },
+    { name: "Selin K.", location: "KonyaaltÃ„Â±", text: "GÃƒÂ¼neÃ…Å¸ yanÃ„Â±Ã„Å¸Ã„Â± iÃƒÂ§in gelmiÃ…Å¸tim, komple boyatmak yerine lokal ÃƒÂ§ÃƒÂ¶zÃƒÂ¼mlerle orijinalliÃ„Å¸i korudular. Ãƒâ€¡ok dÃƒÂ¼rÃƒÂ¼st ve kaliteli bir ekip.", stars: 5 },
+    { name: "Mehmet O.", location: "MuratpaÃ…Å¸a", text: "Restorasyon projem iÃƒÂ§in aylarca yer aradÃ„Â±m, sonunda NeTT ile anlaÃ…Å¸tÃ„Â±m. Sonucu inanÃ„Â±lmaz. Her kuruÃ…Å¸u helal olsun.", stars: 5 }
   ];
 
   const section = document.createElement('section');
@@ -204,17 +204,17 @@ function renderTestimonials() {
   section.innerHTML = `
     <div class="container">
       <div class="section-title">
-        <h2>MÃœÅžTERÄ° <span class="text-yellow">YORUMLARI</span></h2>
-        <p style="color:var(--text-muted); margin-bottom:20px">Google Ã¼zerinden gerÃ§ek kullanÄ±cÄ± deneyimleri</p>
+        <h2>MÃƒÅ“Ã…Å¾TERÃ„Â° <span class="text-yellow">YORUMLARI</span></h2>
+        <p style="color:var(--text-muted); margin-bottom:20px">Google ÃƒÂ¼zerinden gerÃƒÂ§ek kullanÃ„Â±cÃ„Â± deneyimleri</p>
         <div class="section-divider"></div>
       </div>
       <div class="testimonial-grid">
         ${reviews.map(r => `
           <div class="testimonial-card fade-in" itemscope itemtype="https://schema.org/Review">
-            <div class="stars">${'â˜…'.repeat(r.stars)}</div>
+            <div class="stars">${'Ã¢Ëœâ€¦'.repeat(r.stars)}</div>
             <p itemprop="reviewBody">"${r.text}"</p>
             <h3 itemprop="author">${r.name}</h3>
-            <span>${r.location} Â· DoÄŸrulanmÄ±ÅŸ MÃ¼ÅŸteri</span>
+            <span>${r.location} Ã‚Â· DoÃ„Å¸rulanmÃ„Â±Ã…Å¸ MÃƒÂ¼Ã…Å¸teri</span>
           </div>
         `).join('')}
       </div>
@@ -226,11 +226,11 @@ function renderTestimonials() {
 function renderStickyCTA() {
   const actions = document.createElement('div');
   actions.className = 'floating-actions';
-  actions.setAttribute('aria-label', 'HÄ±zlÄ± Ä°letiÅŸim');
+  actions.setAttribute('aria-label', 'HÃ„Â±zlÃ„Â± Ã„Â°letiÃ…Å¸im');
   actions.innerHTML = `
-    <a href="${CONFIG.mapsUrl}" class="floating-btn" data-label="Konumumuz" target="_blank" rel="noopener" aria-label="Google Haritada GÃ¶rÃ¼ntÃ¼le">${ICONS.map}</a>
+    <a href="${CONFIG.mapsUrl}" class="floating-btn" data-label="Konumumuz" target="_blank" rel="noopener" aria-label="Google Haritada GÃƒÂ¶rÃƒÂ¼ntÃƒÂ¼le">${ICONS.map}</a>
     <a href="${CONFIG.whatsapp}${CONFIG.whatsappText}" class="floating-btn wa" data-label="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp ile Yaz">${ICONS.whatsapp}</a>
-    <a href="${CONFIG.phoneTel}" class="floating-btn phone" data-label="Hemen Ara" aria-label="Bizi ArayÄ±n">${ICONS.phone}</a>
+    <a href="${CONFIG.phoneTel}" class="floating-btn phone" data-label="Hemen Ara" aria-label="Bizi ArayÃ„Â±n">${ICONS.phone}</a>
   `;
   document.body.appendChild(actions);
   const mobileBar = document.createElement('div');
@@ -261,7 +261,7 @@ function initPage(opts = {}) {
     noscript.appendChild(iframe);
     document.body.prepend(noscript);
   }
-  // GA4 gtag.js fallback (eğer measurement ID tanımlanmışsa)
+  // GA4 gtag.js fallback (eÄŸer measurement ID tanÄ±mlanmÄ±ÅŸsa)
   if (CONFIG.gaMeasurementId && !document.querySelector('script[src*="gtag/js"]')) {
     const gaScript = document.createElement('script');
     gaScript.async = true;
@@ -322,7 +322,7 @@ function initPage(opts = {}) {
         "@type": "AutoBodyShop",
         "name": "NeTT Oto Boya & Kaporta",
         "image": "https://nettotoboya.com/foto/netotoboya-akdenizsanayisi-dkkan.webp",
-        "description": "Antalya Akdeniz Sanayi'nde profesyonel fırınlı oto boya, kaporta onarım, araç toplama ve araç restorasyon hizmeti.",
+        "description": "Antalya Akdeniz Sanayi'nde profesyonel fÄ±rÄ±nlÄ± oto boya, kaporta onarÄ±m, araÃ§ toplama ve araÃ§ restorasyon hizmeti.",
         "url": "https://nettotoboya.com",
         "telephone": "+905388404264",
         "address": {
@@ -340,7 +340,7 @@ function initPage(opts = {}) {
         }],
         "priceRange": "$$",
         "areaServed": ["Antalya", "Lara", "Muratpasa", "Konyaalti", "Kepez", "Dosemealti", "Aksu"],
-        "knowsAbout": ["Antalya oto boya", "Antalya oto boyaci", "Antalya araç toplama", "Kaporta onarim", "Firinli oto boya"],
+        "knowsAbout": ["Antalya oto boya", "Antalya oto boyaci", "Antalya araÃ§ toplama", "Kaporta onarim", "Firinli oto boya"],
         "sameAs": ["https://share.google/0gzxBtbt3USh0QMjM"]
       };
       if (opts.schema) {
@@ -357,26 +357,26 @@ function initPage(opts = {}) {
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-  // WebMCP Tool: AI ajanlarÄ± iÃ§in fiyat teklifi aracÄ±
+  // WebMCP Tool: AI ajanlarÃ„Â± iÃƒÂ§in fiyat teklifi aracÃ„Â±
   if ('modelContext' in navigator && navigator.modelContext.provideContext) {
     navigator.modelContext.provideContext({
       tools: [{
         name: 'get_auto_paint_quote',
-        description: 'NeTT Oto Boya fiyat teklifi al - araÃ§ modeli, boyanacak parÃ§a ve hasar durumuna gÃ¶re WhatsApp Ã¼zerinden bilgi verir',
+        description: 'NeTT Oto Boya fiyat teklifi al - araÃƒÂ§ modeli, boyanacak parÃƒÂ§a ve hasar durumuna gÃƒÂ¶re WhatsApp ÃƒÂ¼zerinden bilgi verir',
         inputSchema: {
           type: 'object',
           properties: {
-            arac_modeli: { type: 'string', description: 'AracÄ±n markasÄ± ve modeli (Ã¶rn: BMW 3.20i, Mercedes C200)' },
-            boyanacak_parca: { type: 'string', description: 'Boyanacak parÃ§a/ler (Ã¶rn: kapÄ±, tampon, Ã§amurluk, komple)' },
-            hasar_durumu: { type: 'string', description: 'Hasar durumu (Ã¶rn: Ã§izik, ezik, kaza hasarÄ±, gÃ¼neÅŸ yanÄ±ÄŸÄ±)' }
+            arac_modeli: { type: 'string', description: 'AracÃ„Â±n markasÃ„Â± ve modeli (ÃƒÂ¶rn: BMW 3.20i, Mercedes C200)' },
+            boyanacak_parca: { type: 'string', description: 'Boyanacak parÃƒÂ§a/ler (ÃƒÂ¶rn: kapÃ„Â±, tampon, ÃƒÂ§amurluk, komple)' },
+            hasar_durumu: { type: 'string', description: 'Hasar durumu (ÃƒÂ¶rn: ÃƒÂ§izik, ezik, kaza hasarÃ„Â±, gÃƒÂ¼neÃ…Å¸ yanÃ„Â±Ã„Å¸Ã„Â±)' }
           },
           required: ['arac_modeli', 'boyanacak_parca']
         },
         execute: async (args) => {
-          const message = `Merhaba, fiyat teklifi almak istiyorum.\n\nðŸš— AraÃ§: ${args.arac_modeli}\nðŸ”§ ParÃ§a: ${args.boyanacak_parca}\nâš ï¸ Hasar: ${args.hasar_durumu || 'Belirtilmedi'}\n\nLÃ¼tfen tahmini fiyat ve sÃ¼re hakkÄ±nda bilgi verir misiniz?`;
+          const message = `Merhaba, fiyat teklifi almak istiyorum.\n\nÃ°Å¸Å¡â€” AraÃƒÂ§: ${args.arac_modeli}\nÃ°Å¸â€Â§ ParÃƒÂ§a: ${args.boyanacak_parca}\nÃ¢Å¡Â Ã¯Â¸Â Hasar: ${args.hasar_durumu || 'Belirtilmedi'}\n\nLÃƒÂ¼tfen tahmini fiyat ve sÃƒÂ¼re hakkÃ„Â±nda bilgi verir misiniz?`;
           const whatsappUrl = `https://wa.me/905388404264?text=${encodeURIComponent(message)}`;
           window.open(whatsappUrl, '_blank');
-          return { success: true, url: whatsappUrl, message: 'WhatsApp aÃ§Ä±lÄ±yor...' };
+          return { success: true, url: whatsappUrl, message: 'WhatsApp aÃƒÂ§Ã„Â±lÃ„Â±yor...' };
         }
       }]
     });

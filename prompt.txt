@@ -1,0 +1,38 @@
+Claude Code gibi bir terminal tabanlı mühendislik aracına bu görevi verdiğinde, sadece kodu yazmakla kalmaz, dosyaları oluşturur ve projeye entegre eder. İşte Cloudflare Workers kullanarak .html sitene Markdown desteği eklemesi için kullanabileceğin profesyonel ve teknik prompt:
+
+Claude Code İçin "Markdown & WebMCP" Entegrasyon Promptu
+Role: Senior Full-Stack Developer & SEO Expert
+
+Task: nettotoboya.com projemiz için AI ajanlarının (ChatGPT, Gemini vb.) sitemizi daha iyi anlayabilmesini sağlayacak "Markdown Negotiation" ve "WebMCP" özelliklerini entegre et.
+
+Requirements:
+
+Markdown for Agents (Cloudflare Worker):
+
+Proje kök dizinine bir Cloudflare Worker (markdown-agent.js) oluştur.
+
+Bu worker, gelen istekte Accept: text/markdown başlığı varsa sayfayı yakalamalı ve HTML'i Markdown'a çevirerek döndürmelidir.
+
+Yanıt başlıklarına Content-Type: text/markdown ve x-markdown-tokens (tahmini token sayısı) ekle.
+
+HTML'den Markdown'a dönüşüm için hafif bir kütüphane mantığı kur veya mevcut bir kütüphaneyi entegre et.
+
+WebMCP Entegrasyonu (Fiyat Teklifi Al):
+
+Tüm .html dosyalarını (ana sayfa, hizmetler, galeri vb.) tara.
+
+</body> etiketinden hemen önce navigator.modelContext.provideContext API'sini kullanan bir script ekle.
+
+Bu araç (tool) ismi get_auto_paint_quote olmalı.
+
+Parametre olarak arac_modeli, boyanacak_parca ve hasar_durumu bilgilerini almalı.
+
+execute fonksiyonu, alınan bu bilgileri formatlayıp WhatsApp hattımıza (90XXXXXXXXXX - Kendi numaranı buraya yaz) yönlendirecek şekilde kurgulanmalı.
+
+Validation:
+
+İşlem bittikten sonra wrangler.toml dosyasının (eğer varsa) bu yeni worker'a göre yapılandırıldığından emin ol.
+
+HTML dosyalarındaki script'lerin semantik olarak doğru yerleştiğini kontrol et.
+
+Execution: Adım adım ilerle, her dosyada yaptığın değişikliği özetle ve hata kontrolü yap.
